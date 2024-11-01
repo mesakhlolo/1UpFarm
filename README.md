@@ -1,3 +1,3 @@
 # 1UpFarm
 
-Web App Gamifikasi Urban Farming
+Website App Gamifikasi Urban Farming
