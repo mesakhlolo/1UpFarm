@@ -1,11 +1,11 @@
 import { NavLink } from "react-router-dom";
-import LogoPurple from "../../assets/images/icons/Logo-1UPFarm-Ungu.svg";
-import IconPerson from "../../assets/images/icons/Person.svg";
-import IconNotes from "../../assets/images/icons/Notes.svg";
-import IconPlant from "../../assets/images/icons/Plant.svg";
-import IconTask from "../../assets/images/icons/Task.svg";
-import IconSetting from "../../assets/images/icons/Setting.svg";
-import IconExit from "../../assets/images/icons/Exit.svg";
+import LogoPurple from "../assets/images/icons/Logo-1UPFarm-Ungu.svg";
+import IconPerson from "../assets/images/icons/Person.svg";
+import IconNotes from "../assets/images/icons/Notes.svg";
+import IconPlant from "../assets/images/icons/Plant.svg";
+import IconTask from "../assets/images/icons/Task.svg";
+import IconSetting from "../assets/images/icons/Setting.svg";
+import IconExit from "../assets/images/icons/Exit.svg";
 
 const Sidebar = () => {
   return (
