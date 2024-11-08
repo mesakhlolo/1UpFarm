@@ -6,6 +6,7 @@ import PlantingArea from "./pages/PlantingArea";
 import AddPlant from "./pages/AddPlant";
 import DailyTasks from "./pages/DailyTasks";
 import Setting from "./pages/Setting";
+import Notif from "./components/Notif"
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/TambahTanaman" element={<AddPlant />} />
         <Route path="/TugasHarian" element={<DailyTasks />} />
         <Route path="/Pengaturan" element={<Setting />} />
+        <Route path="/Notif" element={<Notif />} />
       </Routes>
     </div>
   );

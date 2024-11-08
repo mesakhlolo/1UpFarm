@@ -10,6 +10,7 @@ import IconSearch from "../assets/images/icons/Search.png";
 import BadgeEasy from "../assets/images/icons/Badge-Easy.png";
 import Tomat from "../assets/images/icons/Tomat.png";
 import IconPlay from "../assets/images/icons/Play.svg";
+import Notif from "../components/Notif";
 
 const AddPlant = () => {
   return (
@@ -22,9 +23,7 @@ const AddPlant = () => {
         style={{ width: "100%", height: "15vh" }}
       >
         <h1 className="fontPoppins fw-bold mb-0">Tambah Tanaman </h1>
-        <button className="d-flex align-items-center justify-content-center border-0 bg-transparent">
-          <img src={IconBell} style={{ width: "30px", aspectRatio: "1/1" }} />
-        </button>
+<Notif />
       </div>
       {/* Progress Bar 1 */}
       <div
