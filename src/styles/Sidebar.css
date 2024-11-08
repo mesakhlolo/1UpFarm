@@ -1,0 +1,35 @@
+.sidebar {
+  height: 100vh;
+  width: 240px;
+  background-color: #ffffff; /* Warna background putih */
+  color: #661599; /* Warna teks ungu */
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #661599; /* Warna teks judul ungu */
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  color: #661599; /* Warna teks dan ikon ungu */
+  border-radius: 0.5rem;
+  transition: background 0.3s ease;
+}
+
+.sidebar-link:hover {
+  background-color: #f2e6ff; /* Background hover dengan ungu lebih terang */
+  color: #4a0d87; /* Warna teks dan ikon saat hover lebih gelap */
+}
+
+.sidebar-link .icon {
+  color: inherit; /* Ikuti warna teks link */
+  margin-right: 0.5rem;
+}

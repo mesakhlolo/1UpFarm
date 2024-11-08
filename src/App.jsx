@@ -1,14 +1,15 @@
-import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Sidebar from "./components/Sidebar";
 
 function App() {
   return (
-    <section>
-      <div>
-        <h1>Test Bootstrap</h1>
-        <Button variant="success">Success Button</Button>
+    <div className="app">
+      <Sidebar />
+      <div className="content" style={{ marginLeft: "240px", padding: "20px" }}>
+        <h1>Selamat Datang di 1UPFarm</h1>
+        <p>Kelola pertanian urbanmu dengan mudah!</p>
       </div>
-    </section>
+    </div>
   );
 }
 
