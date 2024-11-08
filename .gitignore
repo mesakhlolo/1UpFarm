@@ -7,9 +7,15 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependency directories
 node_modules
 dist
 dist-ssr
+
+# Lock files
+pnpm-lock.yaml
+
+# Local environment files
 *.local
 
 # Editor directories and files
@@ -22,3 +28,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Stylesheets
+src/assets/style/sass/
+src/assets/style/sass/**/*.scss
