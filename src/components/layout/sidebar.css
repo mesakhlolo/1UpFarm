@@ -1,0 +1,120 @@
+body {
+    display:flex; 
+    height: 100%; 
+    width: 100%;
+    background-color: #dadada; 
+  }
+  .main-content{
+    margin-left: 300px;
+    width: 100%;
+  }
+
+  .sidebar {
+    width: 250px; 
+    background-color: #ffffff;
+    color: #661599; 
+    padding: 20px;
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1); 
+    height: 100%; 
+    position: fixed; 
+  }
+
+.sidebar .logo img {
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.sidebar .sidebar-content {
+    flex-grow: 1;
+}
+
+.sidebar .sidebar-item,
+.sidebar .profile {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+    color: #661599;
+    transition: background-color 0.3s ease;
+    transform: none;
+}
+
+.sidebar .sidebar-item:hover,
+.sidebar .profile:hover {
+    background-color: #E5DCFC;
+    color: #661599;
+    transform: none !important;
+}
+
+.sidebar .dropdown-toggle {
+    background-color: #E5DCFC;
+    color: #661599;
+    transform: none !important;
+}
+
+.sidebar .dropdown-toggle:hover {
+    background-color: #E5DCFC;
+    color: #661599;
+    transform: none !important;
+}
+
+.sidebar .sidebar-dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #661599;
+    background-color: transparent;
+    transform: none;
+    box-sizing: content-box;
+    border: 1px solid transparent;
+}
+
+.sidebar .sidebar-dropdown-item:hover {
+    background-color: #E5DCFC;
+    color: #661599;
+    padding-left: 20px;
+    transform: none;
+    border-color: #E5DCFC;
+}
+
+.sidebar .sidebar-dropdown-item:active,
+.sidebar .sidebar-dropdown-item:focus {
+    background-color: transparent !important;
+    color: #661599 !important;
+    outline: none !important;
+    transform: none !important;
+    box-shadow: none !important;
+    border-color: transparent !important;
+}
+
+.sidebar .dropdown-toggle:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.sidebar .dropdown-menu {
+    display: none;
+    background-color: #daaaf8 !important;
+    width: 100%;
+    border: 1px solid #E5DCFC !important;
+    border-radius: 5px;
+    box-shadow: none !important;
+    margin-top: 10px;
+}
+
+.sidebar .dropdown.show .dropdown-menu {
+    display: block;
+}
+
+.sidebar .dropdown-menu .dropdown-item:focus,
+.sidebar .dropdown-menu .dropdown-item:active {
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+    color: #661599 !important;
+}
+
+.sidebar-item {
+    padding-bottom: 10px;
+}
