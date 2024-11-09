@@ -7,7 +7,7 @@ import BawangIcon from '../assets/images/icons/Bawang.png';
 import BellIcon from '../assets/images/icons/Bell.svg';
 import { FaCaretDown } from 'react-icons/fa';
 
-const TaskList = () => {
+const DailyTasks = () => {
   const [openTomat, setOpenTomat] = useState(false);
   const [openBayam, setOpenBayam] = useState(false);
   const [openDaunBawang, setOpenDaunBawang] = useState(false);
@@ -174,4 +174,4 @@ const TaskList = () => {
   );
 };
 
-export default TaskList;
+export default DailyTasks;
