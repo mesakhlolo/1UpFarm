@@ -6,6 +6,8 @@ import PlantingArea from "./pages/PlantingArea";
 import AddPlant from "./pages/AddPlant";
 import DailyTasks from "./pages/DailyTasks";
 import Setting from "./pages/Setting";
+import DetailProfil from "./pages/DetailProfil";
+import GantiSandi from "./pages/GantiSandi";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Route path="/TambahTanaman" element={<AddPlant />} />
         <Route path="/TugasHarian" element={<DailyTasks />} />
         <Route path="/Pengaturan" element={<Setting />} />
+        <Route path="/DetailProfil" element={<DetailProfil />} />
+        <Route path="/GantiSandi" element={<GantiSandi />} />
       </Routes>
     </div>
   );

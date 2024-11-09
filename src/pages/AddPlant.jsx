@@ -15,7 +15,7 @@ const AddPlant = () => {
   return (
     <div
       className="grayBg d-flex flex-column align-items-start justify-content-start"
-      style={{ width: "78%", height: "100vh", overflowY: "auto" }}
+      style={{ width: "78%", height: "105vh", overflowY: "auto" }}
     >
       <div
         className="d-flex p-5 align-items-center justify-content-center justify-content-between"
