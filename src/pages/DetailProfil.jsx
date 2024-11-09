@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPen } from '@fortawesome/free-solid-svg-icons';
 import '../assets/styles/css/main.css'; 
 
-const Setting = () => {
+const DetailProfil = () => {
   const [name, setName] = useState("Zacky");
   const [username, setUsername] = useState("Zacky");
   const [email, setEmail] = useState("zacky123@gmail.com");
@@ -13,7 +13,7 @@ const Setting = () => {
     <div
       id="root"
       className="grayBg d-flex align-items-center justify-content-center"
-      style={{ width: "78%", height: "100vh", fontFamily: 'Poppins, sans-serif' }}
+      style={{ width: "78%", height: "105vh", fontFamily: 'Poppins, sans-serif' }}
     >
       <div className="grayBg align-items-center justify-content-center d-flex">
         <Card style={{ width: '600px', margin: '20px', marginLeft: '-400px', marginTop: '-100px', fontFamily: 'Poppins, sans-serif' }}>
@@ -58,7 +58,7 @@ const Setting = () => {
             </Form>
           </Card.Body>
         </Card>
-        <div style={{ position: 'absolute', bottom: '155px', right: '480px',}}>
+        <div style={{ position: 'absolute', bottom: '140px', right: '470px',}}>
           <Button variant="primary" type="button" style={{ fontFamily: 'Poppins, sans-serif' }}> 
             Konfirmasi
           </Button>
@@ -68,4 +68,4 @@ const Setting = () => {
   );
 };
 
-export default Setting;
+export default DetailProfil;
