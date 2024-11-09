@@ -6,7 +6,8 @@ import PlantingArea from "./pages/PlantingArea";
 import AddPlant from "./pages/AddPlant";
 import DailyTasks from "./pages/DailyTasks";
 import Setting from "./pages/Setting";
-import Notif from "./components/Notif"
+import Notif from "./components/Notif";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -14,11 +15,13 @@ function App() {
       <Sidebar />
       <Routes>
         <Route path="/" element={<Profile />} />
-        <Route path="/LacakTanaman" element={<PlantingArea />} />
-        <Route path="/TambahTanaman" element={<AddPlant />} />
-        <Route path="/TugasHarian" element={<DailyTasks />} />
-        <Route path="/Pengaturan" element={<Setting />} />
-        <Route path="/Notif" element={<Notif />} />
+        <Route path="/track-plant" element={<PlantingArea />} />
+        <Route path="/add-plant" element={<AddPlant />} />
+        <Route path="/daily-tasks" element={<DailyTasks />} />
+        <Route path="/settings" element={<Setting />} />
+        <Route path="/notifications" element={<Notif />} />
+        {/* halaman 404 */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );
