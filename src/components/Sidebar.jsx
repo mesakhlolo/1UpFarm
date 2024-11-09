@@ -28,7 +28,7 @@ const Sidebar = () => {
         <h5 className="primaryColor fw-semibold mb-0 ms-2">Profil</h5>
       </NavLink>
       <NavLink
-        to="/LacakTanaman"
+        to="/track-plant"
         className="text-decoration-none d-flex flex-row align-items-center justify-content-start px-4 py-3 hoverSidebar"
         activeClassName="activeSidebar"
         style={{ transition: "all 0.3s ease-in-out" }}
@@ -37,7 +37,7 @@ const Sidebar = () => {
         <h5 className="primaryColor fw-semibold mb-0 ms-2">Lacak Tanaman</h5>
       </NavLink>
       <NavLink
-        to="/TambahTanaman"
+        to="/add-plant"
         className="text-decoration-none d-flex flex-row align-items-center justify-content-start px-4 py-3 hoverSidebar"
         activeClassName="activeSidebar"
         style={{ transition: "all 0.3s ease-in-out" }}
@@ -46,7 +46,7 @@ const Sidebar = () => {
         <h5 className="primaryColor fw-semibold mb-0 ms-2">Tambah Tanaman</h5>
       </NavLink>
       <NavLink
-        to="/TugasHarian"
+        to="/daily-tasks"
         className="text-decoration-none d-flex flex-row align-items-center justify-content-start px-4 py-3 hoverSidebar"
         activeClassName="activeSidebar"
         style={{ transition: "all 0.3s ease-in-out" }}
@@ -55,7 +55,7 @@ const Sidebar = () => {
         <h5 className="primaryColor fw-semibold mb-0 ms-2">Tugas Harian</h5>
       </NavLink>
       <NavLink
-        to="/Pengaturan"
+        to="/settings"
         className="text-decoration-none d-flex flex-row align-items-center justify-content-start px-4 py-3 hoverSidebar"
         activeClassName="activeSidebar"
         style={{ transition: "all 0.3s ease-in-out" }}
