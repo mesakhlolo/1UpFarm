@@ -1,0 +1,35 @@
+.scrollable {
+    max-height: 1000px;
+    overflow-y: auto;
+  }
+  
+  .scrollable::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .scrollable::-webkit-scrollbar-thumb {
+    background-color: #A855F7;
+    border-radius: 3px;
+  }
+  
+  .scrollable::-webkit-scrollbar-track {
+    background: #E5E7EB;
+  }
+  
+  .primaryBg {
+    background-color: #661599;
+  }
+
+  .border-outline {
+    border-color: #661599;
+  }
+  
+  .input-with-icon {
+    padding-left: 40px !important;
+  }
+
+  @media (max-width: 768px) {
+    .card {
+      max-width: 100%;
+    }
+  }
