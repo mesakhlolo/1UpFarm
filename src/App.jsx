@@ -5,7 +5,6 @@ import Profile from "./pages/Profile";
 import PlantingArea from "./pages/PlantingArea";
 import AddPlant from "./pages/AddPlant";
 import DailyTasks from "./pages/DailyTasks";
-import Setting from "./pages/Setting";
 import DetailProfil from "./pages/DetailProfil";
 import GantiSandi from "./pages/GantiSandi";
 import Notif from "./components/Notif";
