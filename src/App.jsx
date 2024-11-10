@@ -21,7 +21,6 @@ function App() {
         <Route path="/track-plant" element={<PlantingArea />} />
         <Route path="/add-plant" element={<AddPlant />} />
         <Route path="/daily-tasks" element={<DailyTasks />} />
-        <Route path="/settings" element={<Setting />} />
         <Route path="/notifications" element={<Notif />} />
         <Route path="/detail-profile" element={<DetailProfil />} />
         <Route path="/change-password" element={<GantiSandi />} />
