@@ -21,7 +21,7 @@ const Sidebar = () => {
       </div>
       <NavLink
         exact
-        to="/"
+        to="/Profile"
         className="text-decoration-none d-flex flex-row align-items-center justify-content-start px-4 py-3 hoverSidebar"
         activeClassName="activeSidebar"
         style={{ transition: "all 0.3s ease-in-out" }}
@@ -83,7 +83,7 @@ const Sidebar = () => {
       </Dropdown>
       <NavLink
 
-        to="/settings"
+        to="/Bantuan"
         className="text-decoration-none d-flex flex-row align-items-center justify-content-start px-4 py-3 hoverSidebar"
         activeClassName="activeSidebar"
         style={{ transition: "all 0.3s ease-in-out", marginTop: "70px" }} // Added marginTop: auto
@@ -93,7 +93,7 @@ const Sidebar = () => {
         <h5 className="primaryColor fw-semibold mb-0 ms-2">Pusat Bantuan</h5>
       </NavLink>
       <NavLink
-        to="#"
+        to="/keluar"
         className="text-decoration-none d-flex flex-row align-items-center justify-content-start px-4 py-3 hoverSidebar"
         activeClassName="activeSidebar"
         style={{ transition: "all 0.3s ease-in-out", marginTop: "auto" }} // Added marginTop: auto
