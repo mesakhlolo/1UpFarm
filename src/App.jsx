@@ -9,25 +9,7 @@ import NotFound from "./pages/NotFound";
 import DetailPlant from "./pages/DetailPlant";
 
 function App() {
-<<<<<<< Updated upstream
-  return (
-    <div className="d-flex flex-row">
-      <Sidebar />
-      <Routes>
-        {/* Route yang benar */}
-        <Route path="/" element={<Profile />} />
-        <Route path="/track-plant" element={<PlantingArea />} />
-        <Route path="/track-plant/detail/1" element={<DetailPlant />} />
-        <Route path="/add-plant" element={<AddPlant />} />
-        <Route path="/daily-tasks" element={<DailyTasks />} />
-        <Route path="/notifications" element={<Notif />} />
-        <Route path="/detail-profile" element={<DetailProfil />} />
-        <Route path="/change-password" element={<GantiSandi />} />
-=======
-  // Status autentikasi (misalnya, dari sistem autentikasi)
-  const isAuthenticated = true; 
->>>>>>> Stashed changes
-
+  const isAuthenticated = true; // Simulasi autentikasi, ganti dengan data yang valid
   return (
     <Routes>
       {/* Rute Publik */}
