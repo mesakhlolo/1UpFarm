@@ -17,6 +17,7 @@ function App() {
       <Sidebar />
       <Routes>
         {/* Rute-rute yang benar */}
+        <Route path="/Profile" element={<Profile />} />
         <Route path="/LacakTanaman" element={<PlantingArea />} />
         <Route path="/TambahTanaman" element={<AddPlant />} />
         <Route path="/TugasHarian" element={<DailyTasks />} />
