@@ -9,6 +9,7 @@ import DetailProfil from "./pages/DetailProfil";
 import GantiSandi from "./pages/GantiSandi";
 import Notif from "./components/Notif";
 import NotFound from "./pages/NotFound";
+import DetailPlant from "./pages/DetailPlant";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         {/* Route yang benar */}
         <Route path="/" element={<Profile />} />
         <Route path="/track-plant" element={<PlantingArea />} />
+        <Route path="/track-plant/detail/1" element={<DetailPlant />} />
         <Route path="/add-plant" element={<AddPlant />} />
         <Route path="/daily-tasks" element={<DailyTasks />} />
         <Route path="/notifications" element={<Notif />} />
