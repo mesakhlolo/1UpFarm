@@ -97,7 +97,7 @@ const DailyTasks = () => {
   };
 
   return (
-    <main className="p-4 grayBg fontPoppins" style={{ width: '78%', height: '100vh', overflowY: 'auto' }}>
+    <main className="p-4 grayBg fontPoppins" style={{ width: '78%', height: '100vh' }}>
       <header className="d-flex justify-content-between align-items-center mb-4">
         <div>
           <h1 className="fw-bold">Daftar Tugas</h1>
