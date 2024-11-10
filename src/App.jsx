@@ -1,17 +1,15 @@
+// src/App.jsx
 import "bootstrap/dist/css/bootstrap.min.css";
-import Sidebar from "./components/Sidebar";
-import { Routes, Route } from "react-router-dom";
-import Profile from "./pages/Profile";
-import PlantingArea from "./pages/PlantingArea";
-import AddPlant from "./pages/AddPlant";
-import DailyTasks from "./pages/DailyTasks";
-import DetailProfil from "./pages/DetailProfil";
-import GantiSandi from "./pages/GantiSandi";
-import Notif from "./components/Notif";
+import { Routes, Route, Navigate } from "react-router-dom";
+import MainLayout from "./layouts/MainLayout";
+import LandingPage from "./pages/LandingPage";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 import NotFound from "./pages/NotFound";
 import DetailPlant from "./pages/DetailPlant";
 
 function App() {
+<<<<<<< Updated upstream
   return (
     <div className="d-flex flex-row">
       <Sidebar />
@@ -25,11 +23,27 @@ function App() {
         <Route path="/notifications" element={<Notif />} />
         <Route path="/detail-profile" element={<DetailProfil />} />
         <Route path="/change-password" element={<GantiSandi />} />
+=======
+  // Status autentikasi (misalnya, dari sistem autentikasi)
+  const isAuthenticated = true; 
+>>>>>>> Stashed changes
 
-        {/* Halaman 404 */}
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </div>
+  return (
+    <Routes>
+      {/* Rute Publik */}
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+      
+      {/* Rute Private (memerlukan autentikasi) */}
+      <Route
+        path="/dashboard/*"
+        element={isAuthenticated ? <MainLayout /> : <Navigate to="/login" />}
+      />
+
+      {/* Halaman 404 */}
+      <Route path="*" element={<NotFound />} />
+    </Routes>
   );
 }
 

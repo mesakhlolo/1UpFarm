@@ -1,0 +1,506 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+.landing-page body {
+  margin: 0;
+  font-family: "Poppins", sans-serif !important;
+  color: #fff;
+}
+
+.landing-page h1,
+.landing-page p {
+  font-family: "Poppins", sans-serif !important;
+}
+
+/* Navbar */
+.landing-page header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #fff;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.landing-page header img {
+  height: 40px;
+}
+
+.landing-page header nav {
+  display: flex;
+  gap: 15px;
+}
+
+.landing-page header nav a {
+  color: #661599;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 5px 5px;
+}
+
+.landing-page header nav a:hover {
+  font-weight: bold;
+}
+
+.landing-page header .cta {
+  display: flex;
+  gap: 10px;
+}
+
+.landing-page header .cta a {
+  background-color: #661599;
+  color: #fff;
+  padding: 5px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.landing-page header .cta a:last-child {
+  margin-right: 0;
+}
+
+/* Home */
+.landing-page .hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px;
+  height: 100vh;
+  box-sizing: border-box;
+}
+.landing-page .hero .text {
+  max-width: 50%;
+}
+.landing-page .hero .text h1 {
+  color: #661599;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+.landing-page .hero .text p {
+  color: #6b6b6b;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.landing-page .hero .text a {
+  background-color: #661599;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.landing-page .hero img {
+  max-width: 40%;
+}
+
+/* Cara Kerja */
+.landing-page .section {
+  padding: 50px;
+  text-align: center;
+}
+.landing-page .section h2 {
+  color: #fff;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+.landing-page .section .cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.landing-page .section .card {
+  background-color: #661599;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px;
+  max-width: 100%;
+  text-align: center;
+}
+.landing-page .section .card img {
+  max-width: 250px;
+  margin-bottom: 20px;
+}
+.landing-page .section .card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #661599;
+}
+.landing-page .section .card p {
+  font-size: 16px;
+}
+
+/* Fitur */
+.feature-container {
+  text-align: center;
+  padding: 50px;
+}
+.feature-title {
+  font-size: 38px !important;
+  color: #661599;
+  margin-bottom: 50px;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.feature-row {
+  display: flex;
+  gap: 20px;
+}
+.feature {
+  background-color: #661599;
+  border-radius: 20px;
+  width: 280px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.342);
+  position: relative;
+  align-items: center;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.feature:nth-child(2),
+.feature:nth-child(4) {
+  background-color: #661599;
+  color: #ffffff;
+}
+.feature img {
+  width: 200px;
+  height: 120px;
+  border-radius: 20px;
+  margin: 0 auto;
+}
+.feature h3 {
+  align-self: flex-start;
+  font-size: 20px;
+  color: #fff;
+}
+.feature p {
+  font-size: 14px;
+  color: #ffffff;
+}
+.hover-text {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #661599;
+  color: #ffffff;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  overflow-y: auto;
+  will-change: transform;
+}
+.feature:hover .hover-text {
+  display: block;
+}
+.hover-text::-webkit-scrollbar {
+  display: none;
+}
+.preferences {
+  margin-left: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.preferences img {
+  width: 300px;
+}
+
+/* Waktu Panen */
+.harvest {
+  background-color: #661599;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+}
+.harvest img {
+  max-width: 40%;
+  margin-left: 50px;
+}
+.harvest .text {
+  max-width: 50%;
+}
+.harvest .text h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.harvest .text p {
+  font-size: 18px;
+  color: #fff;
+}
+
+/* Download */
+.download {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px;
+  height: 100vh;
+  box-sizing: border-box;
+}
+.text-content {
+  max-width: 50%;
+}
+.text-content h1 {
+  font-size: 36px;
+  color: #661599;
+  margin-bottom: 20px;
+}
+.text-content p {
+  font-size: 16px;
+  color: #333333;
+  margin-bottom: 30px;
+}
+.google-play-button {
+  display: flex;
+  align-items: center;
+  border: 2px solid #661599;
+  border-radius: 8px;
+  padding: 10px 10px;
+  text-decoration: none;
+  color: #661599;
+  font-size: 14px;
+  font-weight: bold;
+  width: auto;
+  max-width: 150px;
+}
+.google-play-button img {
+ margin-right: 5px;
+}
+.google-play-button i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+.image-content img {
+  max-width: 200px;
+  border-radius: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: #661599;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+footer .container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+footer .container .logo {
+  display: flex;
+}
+footer .logo img {
+  width: 200px;
+  margin-left: -40px;
+  height: auto;
+}
+footer .container .logo .description {
+  margin-left: 20px;
+  text-align: left;
+}
+footer .container .logo .description h1 {
+  font-size: 24px;
+}
+footer .container .logo .description p {
+  margin: 5px 0 0;
+  font-size: 14px;
+}
+footer .container .column {
+  margin: 10px 0;
+  text-align: left;
+}
+footer .container .column h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+footer .container .column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+footer .container .column ul li {
+  margin: 5px 0;
+}
+footer .container .column ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+footer .social-icons {
+  margin-top: 20px;
+}
+footer .social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 20px;
+  text-decoration: none;
+}
+footer .bottom-bar {
+  margin-top: 20px;
+  border-top: 1px solid white;
+  padding-top: 10px;
+  font-size: 12px;
+}
+footer .bottom-bar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+/* Responsif untuk perangkat mobile */
+@media (max-width: 768px) {
+  .landing-page .hero {
+    padding: 50px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .landing-page .hero img {
+    max-width: 70%;
+    margin-top: 20px;
+  }
+  .landing-page .hero .text {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .landing-page header {
+    padding: 10px 15px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .landing-page header nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .landing-page header .cta {
+    flex-direction: column;
+  }
+  .landing-page header .cta a {
+    margin-top: 10px;
+  }
+  .landing-page .section .cards {
+    flex-direction: column;
+  }
+  .landing-page .section .card {
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+  .landing-page .section .card img {
+    max-width: 200px;
+  }
+  .feature-container .content {
+    flex-direction: column;
+  }
+  .feature-container .features {
+    flex-direction: column;
+  }
+  .feature-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .feature {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+  .harvest {
+    flex-direction: column;
+    text-align: center;
+  }
+  .harvest img {
+    max-width: 60%;
+    margin-top: 20px;
+  }
+  .download {
+    flex-direction: column;
+    padding: 50px;
+  }
+  .text-content {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+  .google-play-button {
+    width: 100%;
+    justify-content: center;
+  }
+  footer .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .container .logo {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  footer .container .column {
+    text-align: center;
+  }
+  footer .social-icons {
+    margin-top: 20px;
+  }
+}
+
+/* Responsif untuk perangkat mobile sangat kecil (smartphone) */
+@media (max-width: 480px) {
+  .landing-page header nav a {
+    font-size: 14px;
+  }
+  .landing-page header .cta a {
+    padding: 5px 15px;
+    font-size: 14px;
+  }
+  .landing-page .hero h1 {
+    font-size: 28px;
+  }
+  .landing-page .hero p {
+    font-size: 16px;
+  }
+  .landing-page .section h2 {
+    font-size: 28px;
+  }
+  .landing-page .section .card h3 {
+    font-size: 20px;
+  }
+  .landing-page .section .card p {
+    font-size: 14px;
+  }
+  .feature .feature-img {
+    max-width: 150px;
+    height: auto;
+  }
+  .feature h3 {
+    font-size: 18px;
+  }
+  .feature p {
+    font-size: 12px;
+  }
+  footer .container .column h3 {
+    font-size: 16px;
+  }
+  footer .container .column ul li a {
+    font-size: 12px;
+  }
+  footer .bottom-bar {
+    font-size: 10px;
+  }
+}
