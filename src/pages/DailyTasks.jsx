@@ -6,6 +6,7 @@ import DaunBawangIcon from '../assets/images/icons/DaunBawang.png';
 import BawangIcon from '../assets/images/icons/Bawang.png';
 import BellIcon from '../assets/images/icons/Bell.svg';
 import { FaCaretDown } from 'react-icons/fa';
+import Notif from "../components/Notif";
 
 const DailyTasks = () => {
   const [openTomat, setOpenTomat] = useState(false);

@@ -1,5 +1,5 @@
+// src/components/Sidebar.jsx
 import { NavLink } from "react-router-dom";
-import { Dropdown } from "react-bootstrap";
 import LogoPurple from "../assets/images/icons/Logo-1UPFarm-Ungu.svg";
 import IconPerson from "../assets/images/icons/Person.svg";
 import IconNotes from "../assets/images/icons/Notes.svg";
@@ -8,6 +8,7 @@ import IconTask from "../assets/images/icons/Task.svg";
 import IconSetting from "../assets/images/icons/Setting.svg";
 import IconExit from "../assets/images/icons/Exit.svg";
 import IconBantuan from "../assets/images/icons/Bantuan.svg";
+import { Dropdown } from "react-bootstrap";
 
 const Sidebar = () => {
   return (
@@ -24,8 +25,7 @@ const Sidebar = () => {
         <h1 className="fw-bold primaryColor lh-1 mb-0 ms-2">1UPFarm</h1>
       </div>
       <NavLink
-        exact
-        to="/"
+        to="/dashboard"
         className="text-decoration-none d-flex flex-row align-items-center justify-content-start px-4 py-3 hoverSidebar"
         activeClassName="activeSidebar"
         style={{ transition: "all 0.3s ease-in-out" }}
@@ -38,7 +38,7 @@ const Sidebar = () => {
         <h5 className="primaryColor fw-semibold mb-0 ms-2">Profil</h5>
       </NavLink>
       <NavLink
-        to="/track-plant"
+        to="/dashboard/track-plant"
         className="text-decoration-none d-flex flex-row align-items-center justify-content-start px-4 py-3 hoverSidebar"
         activeClassName="activeSidebar"
         style={{ transition: "all 0.3s ease-in-out" }}
@@ -51,7 +51,7 @@ const Sidebar = () => {
         <h5 className="primaryColor fw-semibold mb-0 ms-2">Lacak Tanaman</h5>
       </NavLink>
       <NavLink
-        to="/add-plant"
+        to="/dashboard/add-plant"
         className="text-decoration-none d-flex flex-row align-items-center justify-content-start px-4 py-3 hoverSidebar"
         activeClassName="activeSidebar"
         style={{ transition: "all 0.3s ease-in-out" }}
@@ -64,7 +64,7 @@ const Sidebar = () => {
         <h5 className="primaryColor fw-semibold mb-0 ms-2">Tambah Tanaman</h5>
       </NavLink>
       <NavLink
-        to="/daily-tasks"
+        to="/dashboard/daily-tasks"
         className="text-decoration-none d-flex flex-row align-items-center justify-content-start px-4 py-3 hoverSidebar"
         activeClassName="activeSidebar"
         style={{ transition: "all 0.3s ease-in-out" }}
@@ -97,19 +97,20 @@ const Sidebar = () => {
         </Dropdown.Toggle>
 
         <Dropdown.Menu className="w-100 animate-dropdown">
-          <Dropdown.Item as={NavLink} to="/detail-profile">
+          <Dropdown.Item as={NavLink} to="/dashboard/detail-profile">
             Detail Profil
           </Dropdown.Item>
-          <Dropdown.Item as={NavLink} to="/change-password">
+          <Dropdown.Item as={NavLink} to="/dashboard/change-password">
             Ganti Sandi
           </Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
+
       <NavLink
-        to="/help"
+        to="/dashboard/help"
         className="text-decoration-none d-flex flex-row align-items-center justify-content-start px-4 py-3 hoverSidebar"
         activeClassName="activeSidebar"
-        style={{ transition: "all 0.3s ease-in-out", marginTop: "70px" }} // Added marginTop: auto
+        style={{ transition: "all 0.3s ease-in-out", marginTop: "70px" }}
       >
         <img
           src={IconBantuan}
@@ -122,7 +123,7 @@ const Sidebar = () => {
         to="/logout"
         className="text-decoration-none d-flex flex-row align-items-center justify-content-start px-4 py-3 hoverSidebar"
         activeClassName="activeSidebar"
-        style={{ transition: "all 0.3s ease-in-out", marginTop: "auto" }} // Added marginTop: auto
+        style={{ transition: "all 0.3s ease-in-out", marginTop: "auto" }}
       >
         <img
           src={IconExit}

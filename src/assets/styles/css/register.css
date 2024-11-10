@@ -1,0 +1,39 @@
+/* Register.css */
+html, body {
+    background-color: #fff !important;  
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  .form-container {
+    background-color: #E5DCFC; 
+    border-radius: 10px; 
+    padding: 20px; 
+  }
+  
+  .gender-option {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+  }
+  
+  .gender-option.selected {
+    border: 2px solid #6f42c1; 
+    opacity: 1; 
+  }
+  
+  .text-purple {
+    color: #6f42c1; 
+  }
+  
+  a {
+    color: #3a0b75; 
+    text-decoration: none; 
+  }
+  
+  a:hover {
+    color: #5a1772; 
+    text-decoration: underline; 
+  }
+  
