@@ -16,21 +16,15 @@ function App() {
     <div className="d-flex flex-row">
       <Sidebar />
       <Routes>
-        {/* Rute-rute yang benar */}
-        <Route path="/Profile" element={<Profile />} />
-        <Route path="/LacakTanaman" element={<PlantingArea />} />
-        <Route path="/TambahTanaman" element={<AddPlant />} />
-        <Route path="/TugasHarian" element={<DailyTasks />} />
-        <Route path="/Pengaturan" element={<Setting />} />
-        <Route path="/DetailProfil" element={<DetailProfil />} />
-        <Route path="/GantiSandi" element={<GantiSandi />} />
-        
-        {/* Rute-rute baru yang diperbarui */}
+        {/* Route yang benar */}
+        <Route path="/" element={<Profile />} />
         <Route path="/track-plant" element={<PlantingArea />} />
         <Route path="/add-plant" element={<AddPlant />} />
         <Route path="/daily-tasks" element={<DailyTasks />} />
         <Route path="/settings" element={<Setting />} />
         <Route path="/notifications" element={<Notif />} />
+        <Route path="/detail-profile" element={<DetailProfil />} />
+        <Route path="/change-password" element={<GantiSandi />} />
 
         {/* Halaman 404 */}
         <Route path="*" element={<NotFound />} />
