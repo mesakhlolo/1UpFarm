@@ -1,5 +1,4 @@
 import { Form, ProgressBar, Image, Card } from "react-bootstrap";
-import IconBell from "../assets/images/icons/Bell.svg";
 import PlacetoPlant from "../assets/images/illustrations/Tempat-Penanaman.png";
 import PlantinginGround from "../assets/images/illustrations/Penanaman-Tanah.png";
 import PlantinginHydroponics from "../assets/images/illustrations/Penanaman-Hidropnik.png";
@@ -16,14 +15,14 @@ const AddPlant = () => {
   return (
     <div
       className="grayBg d-flex flex-column align-items-start justify-content-start"
-      style={{ width: "78%", height: "105vh", overflowY: "auto" }}
+      style={{ width: "78%", height: "100vh", overflowY: "auto" }}
     >
       <div
         className="d-flex p-5 align-items-center justify-content-center justify-content-between"
         style={{ width: "100%", height: "15vh" }}
       >
         <h1 className="fontPoppins fw-bold mb-0">Tambah Tanaman </h1>
-<Notif />
+        <Notif />
       </div>
       {/* Progress Bar 1 */}
       <div
@@ -137,7 +136,7 @@ const AddPlant = () => {
         className="d-flex flex-row gap-4 pt-4 pb-2 align-items-center justify-content-center"
         style={{ width: "100%" }}
       >
-        <div className="primaryBg px-4 py-1 rounded"></div>
+        <div className="secondaryBg px-4 py-1 rounded"></div>
         <div className="primaryBg px-4 py-1 rounded"></div>
         <div className="secondaryBg px-4 py-1 rounded"></div>
         <div className="secondaryBg px-4 py-1 rounded"></div>
@@ -246,8 +245,8 @@ const AddPlant = () => {
         className="d-flex flex-row gap-4 pt-4 pb-2 mt-3 mb-4 align-items-center justify-content-center"
         style={{ width: "100%" }}
       >
-        <div className="primaryBg px-4 py-1 rounded"></div>
-        <div className="primaryBg px-4 py-1 rounded"></div>
+        <div className="secondaryBg px-4 py-1 rounded"></div>
+        <div className="secondaryBg px-4 py-1 rounded"></div>
         <div className="primaryBg px-4 py-1 rounded"></div>
         <div className="secondaryBg px-4 py-1 rounded"></div>
       </div>
@@ -266,7 +265,6 @@ const AddPlant = () => {
 
         {/* Container Plants */}
         <div className="w-100 px-5 d-flex flex-wrap flex-row gap-3 align-items-center justify-content-center mb-5">
-          
           {/* Card Tomat */}
           <Card
             className="d-flex flex-column align-items-center justify-content-center py-1 px-3 hovercard"
@@ -307,9 +305,9 @@ const AddPlant = () => {
           className="d-flex flex-row gap-4 pt-4 mt-5 mb-1 align-items-center justify-content-center"
           style={{ width: "100%" }}
         >
-          <div className="primaryBg px-4 py-1 rounded"></div>
-          <div className="primaryBg px-4 py-1 rounded"></div>
-          <div className="primaryBg px-4 py-1 rounded"></div>
+          <div className="secondaryBg px-4 py-1 rounded"></div>
+          <div className="secondaryBg px-4 py-1 rounded"></div>
+          <div className="secondaryBg px-4 py-1 rounded"></div>
           <div className="primaryBg px-4 py-1 rounded"></div>
         </div>
         <div className="w-100 d-flex flex-row py-2 px-3 pe-5 mt-3 mb-4 align-items-center justify-content-between secondaryBg rounded">
