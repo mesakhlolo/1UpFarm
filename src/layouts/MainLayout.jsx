@@ -14,7 +14,7 @@ function MainLayout() {
     <div className="d-flex flex-row">
       <Sidebar />
       <Routes>
-        <Route path="/" element={<Profile />} />
+        <Route path="/profile" element={<Profile />} />
         <Route path="/track-plant" element={<PlantingArea />} />
         <Route path="/add-plant" element={<AddPlant />} />
         <Route path="/daily-tasks" element={<DailyTasks />} />

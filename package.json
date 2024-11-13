@@ -7,8 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "sass": "sass ./src/assets/styles/sass/main.scss ./src/assets/styles/css/main.css --watch"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@fontsource/poppins": "^5.1.0",

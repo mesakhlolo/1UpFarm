@@ -29,7 +29,7 @@ const PlantingArea = () => {
   return (
     <main
       className="flex-column align-items-start justify-content-start grayBg"
-      style={{ width: '78%', height: '100vh', overflowX: 'hidden', overflowY: 'auto' }}
+      style={{ width: '78%', height: '100vh', overflowY: 'scroll' }}
     >
       <div
         className="d-flex p-5 align-items-center justify-content-center justify-content-between"

@@ -13,7 +13,7 @@ const DetailProfil = () => {
     <div
       id="root"
       className="grayBg d-flex align-items-center justify-content-center"
-      style={{ width: "78%", height: "105vh", fontFamily: 'Poppins, sans-serif' }}
+      style={{ width: "78%", height: "100vh", fontFamily: 'Poppins, sans-serif', overflowY: "auto" }}
     >
       <div className="grayBg align-items-center justify-content-center d-flex">
         <Card style={{ width: '600px', margin: '20px', marginLeft: '-400px', marginTop: '-100px', fontFamily: 'Poppins, sans-serif' }}>

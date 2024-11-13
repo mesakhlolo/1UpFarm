@@ -98,7 +98,7 @@ const DailyTasks = () => {
   };
 
   return (
-    <main className="p-4 grayBg fontPoppins" style={{ width: '78%', height: '100vh' }}>
+    <main className="p-4 grayBg fontPoppins" style={{ width: '78%', height: '100vh', overflowY: "auto" }}>
       <header className="d-flex justify-content-between align-items-center mb-4">
         <div>
           <h1 className="fw-bold">Daftar Tugas</h1>
@@ -124,7 +124,7 @@ const DailyTasks = () => {
                   <Button
                     variant={activeButton[plant] === 'berjalan' ? 'primary' : 'light'}
                     className="me-2"
-                    style={{
+                    style={{minWidth: '100px',
                       backgroundColor: activeButton[plant] === 'berjalan' ? '#661599' : 'white',
                       borderColor: '#661599',
                       color: activeButton[plant] === 'berjalan' ? 'white' : '#661599'
@@ -136,7 +136,7 @@ const DailyTasks = () => {
                   <Button
                     variant={activeButton[plant] === 'selesai' ? 'primary' : 'light'}
                     className="me-2"
-                    style={{
+                    style={{minWidth: '100px',
                       backgroundColor: activeButton[plant] === 'selesai' ? '#661599' : 'white',
                       borderColor: '#661599',
                       color: activeButton[plant] === 'selesai' ? 'white' : '#661599'
