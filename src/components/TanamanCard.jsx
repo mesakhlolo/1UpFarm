@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../assets/styles/css/PlantingArea.css';
 
 const TanamanCard = ({ name, status, condition, image }) => (
   <div className="card border-outline" style={{ width: '100%', maxWidth: '339px', height: '181px' }}>
@@ -19,13 +18,15 @@ const TanamanCard = ({ name, status, condition, image }) => (
           <p className="card-text mb-1">Status: {status}</p>
           <p className="card-text">Kondisi: {condition}</p>
         </div>
-        <div className="d-flex justify-content-center" style={{ width: '100%', height: '34px' }}>
+        <div>
+        <a href="/dashboard/detail-plant" >
           <button 
             className="fontPoppins primaryBg text-white border-0 rounded" 
             style={{ width: '50%', height: '30px', fontSize: '12px', padding: '5px' }} 
           >
             Lihat
           </button>
+          </a>
         </div>
       </div>
     </div>

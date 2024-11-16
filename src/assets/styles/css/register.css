@@ -1,39 +1,67 @@
 /* Register.css */
-html, body {
-    background-color: #fff !important;  
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
-  
-  .form-container {
-    background-color: #E5DCFC; 
-    border-radius: 10px; 
-    padding: 20px; 
-  }
-  
-  .gender-option {
-    cursor: pointer;
-    opacity: 0.8;
-    transition: opacity 0.3s;
-  }
-  
-  .gender-option.selected {
-    border: 2px solid #6f42c1; 
-    opacity: 1; 
-  }
-  
-  .text-purple {
-    color: #6f42c1; 
-  }
-  
-  a {
-    color: #3a0b75; 
-    text-decoration: none; 
-  }
-  
-  a:hover {
-    color: #5a1772; 
-    text-decoration: underline; 
-  }
-  
+.regis html, body {
+  background-color: #fff !important;  
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.regis .form-container {
+  background-color: #E5DCFC; 
+  border-radius: 10px; 
+  padding: 20px; 
+}
+
+.regis .gender-option {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.regis .gender-option:hover {
+  filter: grayscale(0%);
+}
+
+.regis .text-purple {
+  color: #6f42c1; 
+}
+
+.regis a {
+  color: #3a0b75; 
+  text-decoration: none; 
+}
+
+.regis a:hover {
+  color: #5a1772; 
+  text-decoration: underline; 
+}
+
+.regis .register-btn-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.regis .register-btn {
+  background-color: #6f42c1; 
+  color: #fff;
+  border: none;
+  margin-top: 20px;
+  border-radius: 5px;
+  padding: 10px 100px !important;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 70px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.regis .register-btn:hover {
+  background-color: #5a1772 !important;
+}
+
+.regis a, .text {
+  color: #000; 
+  text-decoration: none; 
+  font-size: 13px;
+  margin-left: 10px;
+}
