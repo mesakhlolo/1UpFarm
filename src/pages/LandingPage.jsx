@@ -15,7 +15,6 @@ import Ig from "../assets/images/icons/ig.svg";
 import Ps from "../assets/images/icons/ps.svg";
 import Twitter from "../assets/images/icons/twitter.svg";
 import Yt from "../assets/images/icons/yt.svg";
-import "../assets/styles/css/landing.css";
 
 const LandingPage = () => {
   return (
