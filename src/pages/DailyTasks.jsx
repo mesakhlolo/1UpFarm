@@ -102,13 +102,6 @@ const DailyTasks = () => {
   };
 
   return (
-<<<<<<< Updated upstream
-    <main className="p-4 grayBg fontPoppins" style={{ width: '78%', height: '100vh', overflowY: "auto" }}>
-      <header className="d-flex justify-content-between align-items-center mb-4">
-        <div>
-          <h1 className="fw-bold">Daftar Tugas</h1>
-          <p className="text-muted">Kamu memiliki 16 tugas bulan ini 👍</p>
-=======
     <div
       className="daily-task grayBg d-flex flex-column align-items-start justify-content-start"
       style={{
@@ -125,7 +118,6 @@ const DailyTasks = () => {
             Kamu memiliki <strong style={{ color: "#611599" }}>16 tugas</strong>{" "}
             bulan ini!
           </p>
->>>>>>> Stashed changes
         </div>
         <Notif className="ms-auto" />
       </div>
@@ -164,12 +156,7 @@ const DailyTasks = () => {
                       activeButton[plant] === "berjalan" ? "primary" : "light"
                     }
                     className="me-2"
-<<<<<<< Updated upstream
-                    style={{minWidth: '100px',
-                      backgroundColor: activeButton[plant] === 'berjalan' ? '#661599' : 'white',
-                      borderColor: '#661599',
-                      color: activeButton[plant] === 'berjalan' ? 'white' : '#661599'
-=======
+
                     style={{
                       backgroundColor:
                         activeButton[plant] === "berjalan"
@@ -180,7 +167,6 @@ const DailyTasks = () => {
                         activeButton[plant] === "berjalan"
                           ? "white"
                           : "#661599",
->>>>>>> Stashed changes
                     }}
                     onClick={() => handleButtonClick(plant, "berjalan")}>
                     Berjalan
@@ -190,19 +176,13 @@ const DailyTasks = () => {
                       activeButton[plant] === "selesai" ? "primary" : "light"
                     }
                     className="me-2"
-<<<<<<< Updated upstream
-                    style={{minWidth: '100px',
-                      backgroundColor: activeButton[plant] === 'selesai' ? '#661599' : 'white',
-                      borderColor: '#661599',
-                      color: activeButton[plant] === 'selesai' ? 'white' : '#661599'
-=======
+
                     style={{
                       backgroundColor:
                         activeButton[plant] === "selesai" ? "#661599" : "white",
                       borderColor: "#661599",
                       color:
                         activeButton[plant] === "selesai" ? "white" : "#661599",
->>>>>>> Stashed changes
                     }}
                     onClick={() => handleButtonClick(plant, "selesai")}>
                     Selesai

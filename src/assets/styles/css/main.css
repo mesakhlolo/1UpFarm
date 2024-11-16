@@ -78,10 +78,6 @@ button {
   font-weight: bold;
 }
 
-<<<<<<< Updated upstream
-/* Untuk Dropdown Sidebar */
-=======
-
 /* Hover efek pada card di dalam sidebar */
 .hovercard:hover {
   box-shadow: 5px 10px 32px -2px rgba(0, 0, 0, 0.51);
@@ -160,7 +156,6 @@ button {
   color: #611599;
   transition: all 0.3s ease-in-out;
 }
->>>>>>> Stashed changes
 
 .animate-dropdown {
   animation: slideDown 0.3s ease;

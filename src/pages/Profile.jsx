@@ -19,23 +19,6 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 const Profile = () => {
   return (
-<<<<<<< Updated upstream
-    <div id="root" className="grayBg d-flex align-items-center justify-content-center" style={{ width: "78%", height: "100vh", overflowY: "auto" }}>
-      <div className="" id="main">
-        <div id="atas">
-          <section id="pengingat">
-            <h3>
-              Hai, <b>Zacky!</b>
-            </h3>
-            <div className="card card-pengingat">
-              <div className="card-body">
-                <h5 className="text-pengingat title fw-semibold">Capai Kemajuan Anda Hari Ini</h5>
-                <p className="card-text text-pengingat">Total 1 dari 4 tugas selesai!</p>
-                <button src="" className="text-pengingat rounded-3">Detail</button>
-              </div>
-              <div className="card-maskot m-0 p-2">
-                <img className="maskot-img" src={Maskot} alt=""></img>
-=======
     <div className="profile grayBg d-flex flex-column align-items-start justify-content-start"
       style={{
         width: "100%",
@@ -64,7 +47,6 @@ const Profile = () => {
                   width="160"
                   style={{ marginRight: "-10px" }}
                 />
->>>>>>> Stashed changes
               </div>
             </div>
 
