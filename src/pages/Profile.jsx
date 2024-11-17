@@ -2,10 +2,18 @@ import React from "react";
 import Tomat from "../assets/images/illustrations/tomat.png";
 import Cabai from "../assets/images/illustrations/cabai.png";
 import Bayam from "../assets/images/illustrations/Bayam.png";
-import DaunBawang from "../assets/images/illustrations/Daun Bawang.png";
+import DaunBawang from "../assets/images/illustrations/daun-bawang.png";
 import Badge from "../components/Badge";
+import Brokoli from "../assets/images/illustrations/brokoli.png";
+import Gender from "../assets/images/illustrations/gender-lk.png";
+import Mudah from "../assets/images/illustrations/badge-easy.png";
+import Sedang from "../assets/images/illustrations/badge-medium.png";
+import Susah from "../assets/images/illustrations/badge-hard.png";
+import Master from "../assets/images/illustrations/badge-master.png";
+import Expert from "../assets/images/illustrations/badge-expert.png";
 import Male from "../assets/images/Male.png";
 import Maskot from "../assets/images/maskot.png";
+import AddPlant from "./AddPlant";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHeart,
