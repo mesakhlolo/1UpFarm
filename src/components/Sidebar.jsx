@@ -92,7 +92,6 @@ const Sidebar = () => {
         <h5 className="primaryColor fw-semibold mb-0 ms-2">Tugas Harian</h5>
       </NavLink>
 
-      {/* Menu Dropdown Pengaturan */}
       <Dropdown align="end" className="w-100">
         <Dropdown.Toggle
           className="text-decoration-none d-flex flex-row align-items-center justify-content-start px-4 py-3 w-100"
@@ -103,51 +102,17 @@ const Sidebar = () => {
             transition: "all 0.3s ease-in-out",
           }}
         >
-          <img
-            src={IconSetting}
-            style={{ width: "30px", aspectRatio: "1/1" }}
-            alt="IconSetting"
-          />
+          <img src={IconSetting} style={{ width: "30px", aspectRatio: "1/1" }} alt="IconSetting" />
           <h5 className="primaryColor fw-semibold mb-0 ms-2">Pengaturan</h5>
         </Dropdown.Toggle>
 
-        <Dropdown.Menu className="w-100">
-          <NavLink
-            to="/dashboard/track-plant"
-            className="text-decoration-none d-flex flex-row align-items-center justify-content-start px-4 py-3 hoverSidebar"
-            style={{ transition: "all 0.3s ease-in-out" }}
-          >
-            <img
-              src={IconNotes}
-              style={{ width: "30px", aspectRatio: "1/1" }}
-              alt="IconNotes"
-            />
-            <h5 className="primaryColor fw-semibold mb-0 ms-2">Lacak Tanaman</h5>
-          </NavLink>
-          <NavLink
-            to="/dashboard/add-plant"
-            className="text-decoration-none d-flex flex-row align-items-center justify-content-start px-4 py-3 hoverSidebar"
-            style={{ transition: "all 0.3s ease-in-out" }}
-          >
-            <img
-              src={IconPlant}
-              style={{ width: "30px", aspectRatio: "1/1" }}
-              alt="IconPlant"
-            />
-            <h5 className="primaryColor fw-semibold mb-0 ms-2">Tambah Tanaman</h5>
-          </NavLink>
-          <NavLink
-            to="/dashboard/daily-tasks"
-            className="text-decoration-none d-flex flex-row align-items-center justify-content-start px-4 py-3 hoverSidebar"
-            style={{ transition: "all 0.3s ease-in-out" }}
-          >
-            <img
-              src={IconTask}
-              style={{ width: "30px", aspectRatio: "1/1" }}
-              alt="IconTask"
-            />
-            <h5 className="primaryColor fw-semibold mb-0 ms-2">Tugas Harian</h5>
-          </NavLink>
+        <Dropdown.Menu className="w-100 animate-dropdown">
+          <Dropdown.Item as={NavLink} to="/dashboard/detail-profile">
+            Detail Profil
+          </ Dropdown.Item>
+          <Dropdown.Item as={NavLink} to="/dashboard/change-password">
+            Ganti Sandi
+          </Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
 

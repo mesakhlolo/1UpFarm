@@ -13,10 +13,10 @@ const DetailProfil = () => {
     <div
       id="root"
       className="grayBg d-flex align-items-center justify-content-center"
-      style={{ width: "78%", height: "100vh", fontFamily: 'Poppins, sans-serif', overflowY: "auto" }}
+      style={{ width: "100%", height: "100vh", fontFamily: 'Poppins, sans-serif', overflowY: "auto" }}
     >
       <div className="grayBg align-items-center justify-content-center d-flex">
-        <Card style={{ width: '600px', margin: '20px', marginLeft: '-400px', marginTop: '-100px', fontFamily: 'Poppins, sans-serif' }}>
+        <Card style={{ width: '600px', margin: '20px', marginLeft: '150px', marginTop: '-100px', fontFamily: 'Poppins, sans-serif' }}>
           <Card.Header style={{ backgroundColor: '#611599', color: '#fff', textAlign: 'left', fontFamily: 'Poppins, sans-serif' }}>
             Detail
           </Card.Header>
@@ -58,7 +58,7 @@ const DetailProfil = () => {
             </Form>
           </Card.Body>
         </Card>
-        <div style={{ position: 'absolute', bottom: '140px', right: '470px',}}>
+        <div style={{ position: 'absolute', bottom: '150px', right: '360px',}}>
           <Button variant="primary" type="button" style={{ fontFamily: 'Poppins, sans-serif' }}> 
             Konfirmasi
           </Button>
