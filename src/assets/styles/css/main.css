@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat&family=Onest:wght@500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
 * {
   margin: 0;
   padding: 0;
@@ -44,104 +43,6 @@ button {
 .grayBg {
   background-color: #f1f5f9;
 }
-/* Sidebar yang tetap di tempat dan tidak terpengaruh oleh konten lain */
-.sidebar {
-  position: fixed; /* Menempatkan sidebar pada posisi tetap di layar */
-  top: 0;
-  left: 0;
-  width: 250px; /* Menetapkan lebar sidebar yang tetap */
-  height: 100vh; /* Sidebar mengisi seluruh tinggi layar */
-  background-color: #ffffff; /* Warna latar belakang sidebar */
-  z-index: 1000; /* Menempatkan sidebar di atas konten lainnya */
-  padding-top: 20px; /* Padding atas untuk memberikan ruang dari atas */
-  overflow: hidden; /* Menonaktifkan scroll di dalam sidebar */
-}
-
-/* Styling untuk tautan sidebar (link) */
-.sidebar a {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: start;
-  padding: 12px 20px;
-  text-decoration: none;
-  transition: all 0.3s ease-in-out;
-}
-
-/* Hover efek pada tautan sidebar */
-.hoverSidebar:hover {
-  background-color: #d9baff;
-}
-
-.activeSidebar {
-  background-color: #d9baff;
-  font-weight: bold;
-}
-
-/* Hover efek pada card di dalam sidebar */
-.hovercard:hover {
-  box-shadow: 5px 10px 32px -2px rgba(0, 0, 0, 0.51);
-  -webkit-box-shadow: 5px 10px 32px -2px rgba(0, 0, 0, 0.51);
-  -moz-box-shadow: 5px 10px 32px -2px rgba(0, 0, 0, 0.51);
-  border: 1px solid #661599;
-  scale: 1.009;
-  transition: all 0.2s ease-in-out;
-}
-
-/* Dropdown di dalam sidebar */
-.dropdown-sidebar {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-sidebar-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-.dropdown-sidebar:hover .dropdown-sidebar-content {
-  display: block;
-}
-
-/* Pengaturan untuk konten utama agar tidak terhalang oleh sidebar */
-.content .profile {
-  margin-left: 250px !important;
-  padding: 20px;
-}
-
-.content .add-plant {
-  margin-left: 350px !important;
-  padding: 20px;
-}
-
-.content .planting-area {
-  margin-left: 350px !important;
-  padding: 20px;
-}
-
-.content .daily-task {
-  margin-left: 350px !important;
-  padding: 20px;
-}
-
-
-/* Styling untuk gambar dalam sidebar */
-.sidebar img {
-  width: 30px;
-  aspect-ratio: 1 / 1;
-}
-
-/* Untuk memastikan teks tetap terpusat dalam sidebar */
-.sidebar h5 {
-  color: #611599;
-  font-weight: 600;
-  margin-left: 10px;
-  margin-bottom: 0;
-}
 
 /* Styling untuk dropdown menu */
 .dropdown-toggle {
@@ -163,33 +64,31 @@ button {
 
 /* Styling untuk card agar lebih konsisten */
 .detail-plant {
-  margin-left: 340px;
+  margin-left: 250px !important; 
 }
 
 .detail-plant .card {
   border-radius: 16px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   background-color: #fff;
-  transition: transform 0.3s ease-in-out;
+  border: none;
+  max-width: 100%; 
 }
 
-/* Styling untuk gambar di carousel */
 .detail-plant .carousel-img {
-  height: 200px; /* Sesuaikan tinggi sesuai kebutuhan */
+  height: auto;
   width: 100%;
   object-fit: cover;
   border-radius: 12px;
-  transition: opacity 0.5s ease-in-out; /* Transisi lebih lembut */
 }
 
-/* Styling arrow navigasi */
 .detail-plant .carousel-control-prev,
-.carousel-control-next {
+.detail-plant .carousel-control-next {
   width: 5%;
 }
 
 .detail-plant .carousel-control-prev-icon,
-.carousel-control-next-icon {
+.detail-plant .carousel-control-next-icon {
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 50%;
   padding: 10px;
@@ -203,7 +102,6 @@ button {
   right: -2.5rem;
 }
 
-/* Styling untuk indikator */
 .detail-plant .carousel-indicators [data-bs-target] {
   background-color: #6a0dad;
   width: 10px;
@@ -214,6 +112,42 @@ button {
 .detail-plant .carousel-indicators .active {
   background-color: #ff9800;
 }
+
+/* Responsivitas */
+@media (max-width: 768px) {
+  .detail-plant {
+    margin-left: 20px; /* Kurangi margin pada layar kecil */
+  }
+
+  .detail-plant .card {
+    width: 100%; /* Kartu menggunakan lebar penuh pada layar kecil */
+  }
+}
+
+@media (min-width: 769px) {
+  .detail-plant {
+    margin-left: 340px; /* Sesuaikan margin untuk layar lebih besar */
+  }
+}
+
+/* Add Plant */
+.add-plant .hover-card {
+  transition: transform 0.3s ease;
+}
+
+.add-plant .hover-card:hover {
+  transform: scale(1.05); 
+}
+
+.add-plant .plant-card {
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.add-plant .plant-card:hover {
+  transform: scale(1.05); /* Scale up the card on hover */
+}
+
+/* Styling untuk indikator */
 
 .planting-area .scrollable {
   max-height: 1000px;
@@ -267,7 +201,7 @@ button {
 /* Main Content */
 .profile .content {
   display: flex;
-  margin-left: 100px;
+  margin-left: 20px;
   flex-wrap: wrap;
   flex: 1;
 }
@@ -302,6 +236,7 @@ button {
   background-color: var(--button-color);
   color: #fff;
   border: none;
+  text-decoration-line: none;
   border-radius: 5px;
   padding: 10px 25px;
   cursor: pointer;
@@ -375,46 +310,47 @@ button {
   border-radius: 10px;
 }
 
+.profile .content h5 {
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+}
+
 .carousel-control-prev,
 .carousel-control-next {
-  color: inherit; /* Inherit color from parent, to allow default Bootstrap colors */
-  font-size: 2rem; /* Adjust the size of the arrow */
+  color: inherit; 
+  font-size: 2rem; 
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   z-index: 1;
-  background: none; /* Remove background */
-  border: none; /* Remove border */
-  border-radius: 50%; /* Make the buttons round */
-  width: 50px; /* Set button width */
-  height: 50px; /* Set button height */
+  background: none; 
+  border: none; 
+  border-radius: 50%; 
+  width: 50px; 
+  height: 50px; 
   border-radius: 50px !important;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0; /* Remove extra padding */
+  padding: 0; 
 }
 
-/* Position the left (previous) button outside the carousel */
 .carousel-control-prev {
-  left: -60px !important; /* Move the button outside to the left */
+  left: -60px !important; 
 }
 
-/* Position the right (next) button outside the carousel */
 .carousel-control-next {
-  right: -60px !important; /* Move the button outside to the right */
+  right: -60px !important; 
 }
 
-/* Optional: Adjust font size if needed */
 .carousel-control-prev .fa,
 .carousel-control-next .fa {
-  font-size: 1.5rem; /* Adjust the font size of the chevrons */
+  font-size: 1.5rem; 
 }
 
-/* Optional: Add a border to the buttons */
 .carousel-control-prev,
 .carousel-control-next {
-  border: 2px solid rgba(0, 0, 0, 0.2); /* Add a subtle border */
+  border: 2px solid rgba(0, 0, 0, 0.2); 
 }
 
 /* Progress and Icons */
@@ -453,16 +389,15 @@ button {
 .icon-heart,
 .icon-star,
 .icon-coins {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   margin-right: 10px;
 }
 
 .text-coins {
   margin-left: 5px;
-  margin-top: 10px;
   color: var(--badge-background);
-  font-size: 25px;
+  font-size: 21px;
 }
 
 
@@ -499,59 +434,66 @@ button {
 
 /* Notifications */
 .notification-card {
-  background-color: #661599;
+  background-color: #cda7ff !important;
   padding: 15px;
   border-radius: 8px;
-  width: 100%; /* Ensures the card takes full width of the parent container */
+  width: 100%; 
 }
 
-.profile .notif {
-  padding: 10px;
-  overflow-y: auto; /* Allow vertical scrolling */
-  max-height: 250px; /* Adjust to show only two items */
-  width: 100%; /* Ensure notifications container takes the full width inside the card */
+.notification-card h5 {
+  color: black;
+  margin-bottom: 10px;
 }
 
-.notif::-webkit-scrollbar {
-  width: 12px;
-}
-
-.notif::-webkit-scrollbar-thumb {
-  background: linear-gradient(var(--button-color), var(--button-color));
-  border-radius: 25px;
+.notif {
+  padding: 10px 0;
+  width: 100%;
+  padding-right: 8px;
+  max-height: 2240px; 
+  overflow-y: auto; 
+  scrollbar-gutter: stable; 
 }
 
 .notif-body {
-  background-color: var(--mainColor);
+  background-color: #661599;
   display: flex;
   flex-direction: row;
-  align-items: center; /* Centers the image vertically */
-  height: 100px;
-  margin-bottom: 5px;
-  padding: 10px;
+  align-items: center; 
+  height: auto;
+  margin-bottom: 10px; 
+  padding: 12px;
   border-radius: 8px;
-  scroll-snap-align: start;
 }
 
+
 .notif-body img {
-  margin-right: 10px; /* Adds space between image and text */
+  margin-right: 10px; 
+  border-radius: 50%; 
 }
 
 .notif-body p {
-  margin-bottom: 2px; /* Decrease the margin between <p> and <small> */
+  margin: 0; 
+  color: white;
 }
 
 .notif-body small {
-  margin-top: 0; /* Remove any top margin that could be pushing <small> down */
+  margin-top: 2px;
+  display: block; 
+  color: #e6e6e6; 
 }
 
-/* Teks pada h5 untuk menangani teks panjang */
-.profile .content h5 {
-  overflow: hidden; /* Menyembunyikan teks yang melampaui batas */
-  text-overflow: ellipsis; /* Menambahkan elipsis (...) pada teks yang terlalu panjang */
+/* Kustomisasi scrollbar */
+.notif::-webkit-scrollbar {
+  width: 8px;
+}
+
+.notif::-webkit-scrollbar-thumb {
+  background: #661599;
+  border-radius: 8px;
 }
 
 
+/* CSS Landing Page */
 .landing-page body {
   margin: 0;
   font-family: "Poppins", sans-serif !important;
@@ -1010,7 +952,19 @@ footer .bottom-bar a {
   footer .social-icons {
     margin-top: 20px;
   }
+
+  .notification-card {
+    padding: 10px; 
+  }
+  .notif-body {
+    flex-direction: column; 
+    align-items: flex-start;
+  }
+  .notif-body img {
+    margin-bottom: 8px;
+  }
 }
+
 
 /* Responsif untuk perangkat mobile sangat kecil (smartphone) */
 @media (max-width: 480px) {

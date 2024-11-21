@@ -1,0 +1,353 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Onest:wght@500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*{
+  font-family: "Poppins", sans-serif;
+}
+
+
+:root {
+  --mainColor: #661599 !important;
+  --secondaryColor: #E5DCFC !important;
+  --thirdColor: #BADFED !important;
+}
+
+.profile-container {
+  display: flex;
+  font-family: Arial, sans-serif;
+}
+
+.sidebar {
+  width: 300px;
+  background-color: #643ac6;
+  color: #fff;
+  padding: 20px;
+}
+
+.sidebar h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.menu {
+  list-style-type: none;
+  padding: 0;
+  
+}
+
+.menu li {
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+
+/* Menu Atas */
+
+#atas{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  margin-top: 50px;
+  transition: top 0.3s;
+  margin-right: 170px;
+}
+
+/* Menu Pengingat */
+
+#pengingat .card-pengingat {
+  max-width: 450px;
+  background-color: var(--secondaryColor);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.maskot-img{
+  max-width: 200px;
+  display: flex;
+  align-items: center !important;
+}
+
+button {
+  width: 4rem;
+  background-color: var(--mainColor);
+  color: #fff;
+  border: none;
+  padding: 5px;
+  
+}
+/* End Menu Pengingat */
+
+/* Menu Mulai */
+.mulai-img{
+  width: 150px;
+}
+
+#mulai {
+  display: flex;
+  flex-direction: column;
+  margin-left: 190px;
+}
+
+.card-tombol-mulai button {
+  margin-left: 1px;
+  width: 150px;
+}
+
+.carousel-control {
+  background-color: var(--mainColor);
+  border-radius: 100%;
+  height: 50px;
+  transform: rotateY(-50%);
+  top:30%
+}
+
+
+/* End Menu Mulai */
+
+
+
+/* End Menu Atas */
+
+
+
+/* Menu Bawah */
+
+aside {
+  float: left;
+  width: 55%;
+  margin-right: 20px;
+}
+
+
+
+/* Menu Profil */
+
+
+.card-heart {
+  display: flex;
+  flex-direction: row;
+}
+
+.progress-long-heart {
+  position: relative;
+  background-color: #d9d9d9;
+  border-radius: 5px;
+  height: 25px;
+  width: 200px;
+  left: 5px;
+}
+
+.progress-short-heart {
+  width: 75%;
+  height: 100%;
+  background-color: #EB2222;
+  border-radius: 5px;
+  position: relative;
+}
+
+
+.progress-long-star {
+  position: relative;
+  background-color: #d9d9d9;
+  border-radius: 5px;
+  height: 25px;
+  width: 200px;
+  left: 5px;
+  
+}
+
+.progress-short-star {
+  width: 50%;
+  height: 100%;
+  background-color: #7297F6;
+  border-radius: 5px;
+  position: relative;
+} 
+
+
+.card-heart, .card-star, .card-coin {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 5px; /* Jarak antar card */
+}
+
+.icon-heart, .icon-star, .icon-coins {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.text-coins {
+  margin-left: 5px;
+  margin-top: 10px;
+  color: #FCB825;
+}
+
+.icon-coins{
+  margin-top: 10px;
+}
+
+.card-profil  {
+  background-color:#BADFED;
+  width: 10rem;
+  height: 13rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+.card-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.card-img-gender {
+  display: flex;
+  align-items: center;
+}
+
+.img-gender {
+  width: 350px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.card-level {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 20px;
+}
+
+.card-icon img,
+.card-icon h6 {
+  justify-content: initial;
+}
+
+.card-body-profil {
+  display: flex;
+  flex-direction: row !important;
+}
+
+
+/* End Menu Profil */
+
+/*  Menu Notif */
+
+
+.card-title-notif {
+  text-align: start;
+}
+
+.img-sayur {
+  width: 3rem;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.text {
+  margin: 5px;
+  color: #ffff;
+  font-size: small;
+}
+
+
+.notif {
+  background-color: #E5DCFC;
+  padding: 10px;
+  align-items: end !important;
+  overflow-y: auto;
+  scroll-snap-type: y mandators;
+  scroll-padding: 24px;
+  max-height: 370px;
+  width: max-content;
+} 
+
+#notif{
+  display: flex;
+  flex-direction: column;
+} 
+
+.notif::-webkit-scrollbar {
+  width: 12px;
+  height: auto;
+  border-radius: 25px;
+}
+
+.notif::-webkit-scrollbar-track {
+  background: #b86abb;
+}
+
+.notif::-webkit-scrollbar-thumb {
+  background: linear-gradient(#661599, #661599);
+  border-radius: 25px;
+} 
+
+.notif .notif-body{
+  scroll-snap-align: start;
+} 
+
+
+
+.konten{
+  display: flex;
+  flex-direction: row;
+}
+
+
+.samping {
+display: flex;
+flex-direction: row;
+}
+
+.notif-body {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5px;
+}
+
+
+
+/* End Menu Notif */
+
+/* Menu Lencana */
+.card-body-lencana {
+  display: flex;
+  flex-direction: column;
+  width: 430px;
+  border: none;
+  padding : 10px 0;
+  align-items: center !important;
+  justify-content: center;
+}
+
+
+.card-body-text-lencana {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  margin-right: 9px;
+}
+
+.lencana-img {
+  width: 60px;
+  height: 62px;
+  gap: 10px;
+}
+
+.lencana-img-king{
+  width: 64px;
+}
+/* End Menu Lencana */
+
+/* End Menu Bawah */

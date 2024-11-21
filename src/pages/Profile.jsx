@@ -2,18 +2,10 @@ import React from "react";
 import Tomat from "../assets/images/illustrations/tomat.png";
 import Cabai from "../assets/images/illustrations/cabai.png";
 import Bayam from "../assets/images/illustrations/Bayam.png";
-import DaunBawang from "../assets/images/illustrations/daun-bawang.png";
+import DaunBawang from "../assets/images/illustrations/Daun Bawang.png";
 import Badge from "../components/Badge";
-import Brokoli from "../assets/images/illustrations/brokoli.png";
-import Gender from "../assets/images/illustrations/gender-lk.png";
-import Mudah from "../assets/images/illustrations/badge-easy.png";
-import Sedang from "../assets/images/illustrations/badge-medium.png";
-import Susah from "../assets/images/illustrations/badge-hard.png";
-import Master from "../assets/images/illustrations/badge-master.png";
-import Expert from "../assets/images/illustrations/badge-expert.png";
-import Male from "../assets/images/Male.png";
+import Male from "../assets/images/illustrations/Male.png";
 import Maskot from "../assets/images/maskot.png";
-import AddPlant from "./AddPlant";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHeart,
@@ -31,14 +23,13 @@ const Profile = () => {
       style={{
         width: "100%",
         height: "100vh",
-        overflowY: "hide", 
+        overflowY: "hidden", 
       }}>
       <div className="content">
         <div className="row">
           {/* Profile and Badges Column - Left Side */}
           <div className="col-md-6">
-            {/* Profile and Badges Content (Left Side) */}
-            <div className="progress-card" style={{ backgroundColor: "#fff" }}>
+            <div className="progress-card mb-2" style={{ backgroundColor: "#fff" }}>
               <div className="d-flex justify-content-between align-items-center">
                 <div>
                   <h4 className="fw-bold" style={{ color: "#611599" }}>
@@ -46,23 +37,25 @@ const Profile = () => {
                   </h4>
                   <h5>Capai Progress kamu Hari Ini!</h5>
                   <br />
+                  <a href="/dashboard/detail-plant">
                   <button className="btn-purple">Detail</button>
+                  </a>
                 </div>
                 <img
                   alt="Progress Image"
-                  height="170"
+                  height="150"
                   src={Maskot}
-                  width="160"
+                  width="140"
                   style={{ marginRight: "-10px" }}
                 />
               </div>
             </div>
 
             {/* Profile Section */}
-            <div className="profile-card mb-3">
+            <div className="profile-card mb-2">
               <h5>Profil</h5>
               <div className="d-flex align-items-center">
-                <img alt="Profile Image" height="150" src={Male} width="120" />
+                <img alt="Profile Image" height="130" src={Male} width="100" />
                 <div>
                   <div className="d-flex align-items-center card-heart">
                     <FontAwesomeIcon
@@ -102,9 +95,8 @@ const Profile = () => {
           {/* Carousel and Notifications Column - Right Side */}
           <div
             className="col-md-6"
-            style={{ position: "relative", left: "50px" }}>
+            style={{ position: "relative", left: "10px" }}>
             {" "}
-            {/* Add margin to shift right */}
             {/* Carousel Section */}
             <div className="start-planting-card text-center position-relative mb-3">
               <div
@@ -161,13 +153,12 @@ const Profile = () => {
                 padding: "15px",
                 borderRadius: "8px",
               }}>
-              <h5 style={{ color: "white" }}>Pemberitahuan</h5>
-              <h6 style={{ color: "white" }}>Hari Ini</h6>
+              <h5 style={{ color: "#661599" }}> <strong>Pemberitahuan</strong> </h5>
               <div className="notif">
                 <div
                   className="notif-body"
                   style={{
-                    backgroundColor: "white",
+                    backgroundColor: "#661599",
                     padding: "10px",
                     borderRadius: "8px",
                   }}>
@@ -186,7 +177,7 @@ const Profile = () => {
                 <div
                   className="notif-body"
                   style={{
-                    backgroundColor: "white",
+                    backgroundColor: "#661599",
                     padding: "10px",
                     borderRadius: "8px",
                   }}>
@@ -202,26 +193,6 @@ const Profile = () => {
                     <small>Daun Bawang - 1 Minggu</small>
                   </div>
                 </div>
-                <div
-                  className="notif-body"
-                  style={{
-                    backgroundColor: "white",
-                    padding: "10px",
-                    borderRadius: "8px",
-                  }}>
-                  <img
-                    alt="Notification Image 2"
-                    className="me-3"
-                    height="50"
-                    src={DaunBawang}
-                    width="50"
-                  />
-                  <div>
-                    <p>Jangan lupa untuk menyiram tanaman hari ini</p>
-                    <small>Daun Bawang - 1 Minggu</small>
-                  </div>
-                </div>
-                {/* You can add more notification cards here, they will be scrollable */}
               </div>
             </div>
           </div>

@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Carousel, Card } from "react-bootstrap";
 import Notif from "../components/Notif";
+import BadgeModal from "../components/BadgeModal";
 import AirBiruImg from "../assets/images/icons/Air-Biru.png";
 import AirPutihImg from "../assets/images/icons/Air-Putih.png";
 import SiramImg from "../assets/images/icons/Siram.png";
@@ -12,6 +13,12 @@ import bawangImg from "../assets/images/icons/Bawang.png";
 import step1Image from "../assets/images/detail-plant-images/step1.jpg";
 
 const DetailPlant = () => {
+  const [showBadgeModal, setShowBadgeModal] = useState(false);
+
+  const toggleBadgeModal = () => {
+    setShowBadgeModal((prevState) => !prevState);
+  };
+
   // Data dummy rekomendasi nutrisi
   const rekomendasiNutrisi = [
     {
@@ -40,15 +47,13 @@ const DetailPlant = () => {
     <main
       className="detail-plant flex-column align-items-start justify-content-start grayBg"
       style={{
-        width: "78%",
+        width: "100%",
         height: "100vh",
         overflowX: "hidden",
         overflowY: "auto",
       }}>
       {/* judul */}
-      <div
-        className="detail-plant d-flex p-5 align-items-center justify-content-center justify-content-between"
-        style={{ width: "100%", height: "15vh" }}>
+      <div className="badge-container d-flex align-items-center justify-content-between p-4 mt-3">
         <h1 className="fontPoppins fw-bold mb-0">Detail Tanaman</h1>
         <Notif />
       </div>
@@ -66,15 +71,17 @@ const DetailPlant = () => {
                 style={{ borderRadius: "10px" }}
                 width="200"
               />
-              <button
-                className="btn btn-primary mt-3"
-                style={{
-                  width: "200px",
-                  backgroundColor: "#661599",
-                  border: "none",
-                }}>
-                Tanam sekarang
-              </button>
+              <a href="/dashboard/add-plant" style={{ color: "white" }}>
+                <button
+                  className="btn btn-primary mt-3"
+                  style={{
+                    width: "200px",
+                    backgroundColor: "#661599",
+                    border: "none",
+                  }}>
+                  Tanam sekarang
+                </button>
+              </a>
             </div>
 
             {/* Bagian Tengah - Informasi Tanaman */}
@@ -88,15 +95,15 @@ const DetailPlant = () => {
                   <div className="d-flex align-items-center justify-content-center gap-2">
                     {/* Waktu Tanam */}
                     <div className="text-center">
-                      <p className="fw-bold text-decoration-underline mb-1">
-                        Waktu Tanam
-                      </p>
-                      <p className="mb-0">5 Jan 2022</p>
+                      <p className="fw-bold mb-0">Waktu Tanam</p>
+                      <small>
+                        <p className="mb-0">5 Jan 2022</p>
+                      </small>
                     </div>
                     {/* Arrow */}
                     <div
                       style={{
-                        fontSize: "18px",
+                        fontSize: "15px",
                         marginLeft: "10px",
                         marginRight: "10px",
                         fontWeight: "bold",
@@ -105,8 +112,10 @@ const DetailPlant = () => {
                     </div>
                     {/* Prediksi Panen */}
                     <div className="text-center">
-                      <p className="fw-bold mb-1">Prediksi Panen</p>
-                      <p className="mb-0">28-29 Jan 2022</p>
+                      <p className="fw-bold mb-0">Prediksi Panen</p>
+                      <small>
+                        <p className="mb-0">28-29 Jan 2022</p>
+                      </small>
                     </div>
                   </div>
                   {/* Status Badge */}
@@ -138,12 +147,12 @@ const DetailPlant = () => {
               </h5>
               <div
                 className="d-flex align-items-center"
-                style={{ marginTop: "90px" }}>
+                style={{ marginTop: "100px" }}>
                 {/* Baik Condition Icon */}
                 <img
                   alt="Kondisi Baik"
                   src={BaikImg}
-                  style={{ width: "100px", marginRight: "15px" }}
+                  style={{ width: "80px", marginRight: "15px" }}
                 />
                 <div>
                   {/* Weekly Progress Bar */}
@@ -152,7 +161,7 @@ const DetailPlant = () => {
                     <img
                       alt="Jam Icon"
                       src={JamImg}
-                      style={{ width: "45px", marginRight: "30px" }}
+                      style={{ width: "35px", marginRight: "15px" }}
                     />
 
                     {/* Progress Bar dengan Checkpoint */}
@@ -174,7 +183,7 @@ const DetailPlant = () => {
                           className="progress-bar"
                           role="progressbar"
                           style={{
-                            width: "35%", // Ubah persentase progress di sini (contoh: 50% = 2 checkpoint tercapai)
+                            width: "35%",
                             backgroundColor: "#28a745",
                           }}
                           aria-valuenow="50"
@@ -189,7 +198,7 @@ const DetailPlant = () => {
                           className="position-absolute d-flex justify-content-center align-items-center"
                           style={{
                             top: "50%",
-                            left: `${(index / 3) * 100}%`, 
+                            left: `${(index / 3) * 100}%`,
                             transform: "translate(-50%, -50%)",
                             width: index === 3 ? "30px" : "20px",
                             height: index === 3 ? "30px" : "20px",
@@ -204,8 +213,8 @@ const DetailPlant = () => {
                               alt="Finish Flag"
                               src={FlagImg}
                               style={{
-                                width: "30px",
-                                height: "30px",
+                                width: "25px",
+                                height: "25px",
                               }}
                             />
                           ) : (
@@ -216,7 +225,7 @@ const DetailPlant = () => {
                                 color: "#28a745",
                                 fontWeight: "bold",
                               }}>
-                              {index + 1}w
+                              {index + 0}w
                             </span>
                           )}
                         </div>
@@ -230,7 +239,7 @@ const DetailPlant = () => {
                     <img
                       alt="Siram Icon"
                       src={SiramImg}
-                      style={{ width: "60px", marginRight: "15px" }}
+                      style={{ width: "40px", marginRight: "10px" }}
                     />
                     {/* Bar Air */}
                     <div
@@ -308,7 +317,8 @@ const DetailPlant = () => {
               padding: "8px 20px",
               fontWeight: "bold",
               border: "none",
-            }}>
+            }}
+            onClick={toggleBadgeModal}>
             Ambil
           </button>
         </div>
@@ -410,6 +420,7 @@ const DetailPlant = () => {
           </Carousel>
         </div>
       </div>
+      <BadgeModal show={showBadgeModal} onClose={toggleBadgeModal} />
     </main>
   );
 };

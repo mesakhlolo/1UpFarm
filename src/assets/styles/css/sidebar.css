@@ -1,0 +1,138 @@
+/* Sidebar Specific Styles */
+.sidebar-container {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: width 0.3s ease;
+    overflow-x: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebar-container * {
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .sidebar-logo {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #f1f5f9;
+  }
+  
+  .sidebar-logo-image {
+    width: 30px;
+    aspect-ratio: 1/1;
+    margin-right: 10px;
+  }
+  
+  .sidebar-logo-text {
+    color: #661599;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .sidebar-menu-container {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0;
+    flex-grow: 1;
+  }
+  
+  .sidebar-menu-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #661599;
+    transition: all 0.3s ease;
+  }
+  
+  .sidebar-menu-item:hover {
+    background-color: #d9baff;
+    text-decoration: none;
+  }
+  
+  .sidebar-menu-item-active {
+    background-color: #d9baff;
+    font-weight: bold;
+  }
+  
+  .sidebar-menu-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+  }
+  
+  .sidebar-dropdown-toggle {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: none;
+    border: none;
+    color: #661599;
+    padding: 12px 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .sidebar-dropdown-menu {
+    background-color: #ffffff;
+    border: 0px solid #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebar-dropdown-toggle:hover {
+    background-color: #d9baff;
+  }
+  
+  .sidebar-footer-section {
+    margin-top: auto;
+    border-top: 1px solid #f1f5f9;
+    padding: 15px 0;
+  }
+  
+  .sidebar-footer-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #661599;
+    transition: all 0.3s ease;
+  }
+  
+  .sidebar-footer-item:hover {
+    background-color: #d9baff;
+    text-decoration: none;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .sidebar-container {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+  
+    .sidebar-menu-container {
+      flex-direction: row;
+      overflow-x: auto;
+    }
+  
+    .sidebar-menu-item,
+    .sidebar-footer-item {
+      flex-shrink: 0;
+    }
+  }
+  
+  /* Content Margin Adjustment for Sidebar */
+  .content .profile,
+  .content .add-plant,
+  .content .planting-area,
+  .content .daily-task {
+    margin-left: 250px !important;
+    padding: 20px;
+  }

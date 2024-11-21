@@ -1,61 +1,45 @@
 import React, { useState } from "react";
 import IconBell from "../assets/images/icons/Bell.svg";
+import Bayam from "../assets/images/icons/Bayam.png"; 
 
 const Notif = () => {
   const [notifications, setNotifications] = useState([
-    { id: 1, message: "Ada komentar baru di video Anda!", read: false },
-    { id: 2, message: "Video Anda sudah mencapai 1000 view!", read: false },
-    { id: 3, message: "Ada komentar baru di video Anda!", read: false },
-    { id: 4, message: "Video Anda sudah mencapai 1000 view!", read: false },
-    { id: 5, message: "Video Anda sudah mencapai 1000 view!", read: false },
+    {
+      id: 1,
+      message: "Jangan lupa untuk menyiram tanaman hari ini",
+      detail: "Bayam - 1 Minggu",
+      read: false,
+      image: Bayam,
+    },
+    {
+      id: 2,
+      message: "Tanaman Anda terlihat sehat hari ini",
+      detail: "Bayam - 2 Hari",
+      read: false,
+      image: Bayam,
+    },
   ]);
   const [showDropdown, setShowDropdown] = useState(false);
-  const [hoveredNotif, setHoveredNotif] = useState(null); // Track yang sedang di-hover
-  const [clickedNotif, setClickedNotif] = useState(null); // Track yang sedang di-click
 
   // Menandai notifikasi sebagai sudah dibaca
   const markAsRead = (id) => {
     setNotifications(
       notifications.map((notification) =>
-        notification.id === id
-          ? { ...notification, read: true }
-          : notification
+        notification.id === id ? { ...notification, read: true } : notification
       )
     );
   };
 
   // Mengontrol tampilan dropdown
-  const toggleDropdown = () => {
-    setShowDropdown(!showDropdown);
-  };
-
-  // Fungsi menangani klik pada notifikasi
-  const handleMouseDown = (id) => {
-    setClickedNotif(id); // Menandai notifikasi yang diklik
-  };
-
-  const handleMouseUp = () => {
-    setClickedNotif(null); // Mengembalikan state setelah klik selesai
-  };
-
-  const handleMouseLeave = () => {
-    if (!clickedNotif) {
-      setHoveredNotif(null); // Menghapus state hover jika bukan dalam status klik
-    }
-  };
-
-  const handleMouseEnter = (id) => {
-    if (clickedNotif !== id) {
-      setHoveredNotif(id); // Menandai notifikasi yang sedang di-hover jika tidak diklik
-    }
-  };
+  const toggleDropdown = () => setShowDropdown(!showDropdown);
 
   return (
     <div className="position-relative">
+      {/* Tombol Notifikasi */}
       <button
         className="d-flex align-items-center justify-content-center border-0 bg-transparent"
         onClick={toggleDropdown}
-      >
+        style={{ position: "relative" }}>
         <img
           src={IconBell}
           style={{ width: "30px", aspectRatio: "1/1" }}
@@ -68,56 +52,66 @@ const Notif = () => {
         )}
       </button>
 
+      {/* Dropdown Notifikasi */}
       {showDropdown && (
         <div
-          className="dropdown-menu show position-absolute mt-2"
+          className="notification-card position-absolute mt-2"
           style={{
-            width: "300px", 
-            left: "-280px", 
-            top: "35px",    
-            maxHeight: "300px", 
-            overflowY: "auto", 
-          }}
-        >
-          {notifications.length > 0 ? (
-            notifications.map((notification) => (
+            width: "400px",
+            left: "-350px",
+            top: "35px",
+            maxHeight: "400px",
+            overflowY: "auto",
+            backgroundColor: "#CDA7FF",
+            borderRadius: "8px",
+            padding: "15px",
+            zIndex: 1000,
+          }}>
+          <h5 style={{ color: "Black" }}>Pemberitahuan</h5>
+          <div className="notif">
+            {notifications.length > 0 ? (
+              notifications.map((notification) => (
+                <div
+                  key={notification.id}
+                  className="notif-body mb-2"
+                  onClick={() => markAsRead(notification.id)}
+                  style={{
+                    cursor: "pointer",
+                    backgroundColor: notification.read ? "#A155D1" : "#661599",
+                    padding: "12px",
+                    borderRadius: "8px",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "10px",
+                    transition: "background-color 0.3s",
+                  }}>
+                  {notification.image && (
+                    <img
+                      src={notification.image}
+                      alt="Notification"
+                      height="50"
+                      width="50"
+                      style={{ borderRadius: "8px" }}
+                    />
+                  )}
+                  <div style={{ color: "white" }}>
+                    <p className="mb-1" style={{ margin: 0 }}>
+                      {notification.message}
+                    </p>
+                    {notification.detail && (
+                      <small>{notification.detail}</small>
+                    )}
+                  </div>
+                </div>
+              ))
+            ) : (
               <div
-                key={notification.id}
-                className={`dropdown-item ${notification.read ? "" : "bg-light"}`}
-                onClick={() => markAsRead(notification.id)} // Menandai sebagai sudah dibaca
-                onMouseDown={() => handleMouseDown(notification.id)} // Saat mouse ditekan
-                onMouseUp={handleMouseUp} // Saat mouse dilepas
-                onMouseEnter={() => handleMouseEnter(notification.id)} // Saat mouse masuk
-                onMouseLeave={handleMouseLeave} // Saat mouse keluar
-                style={{
-                  padding: "10px 15px", 
-                  cursor: "pointer", 
-                  fontSize: "14px",    
-                  borderRadius: "8px", 
-                  width: "auto", 
-                  whiteSpace: "nowrap", 
-                  overflow: "hidden", 
-                  textOverflow: "ellipsis",
-                  backgroundColor:
-                    clickedNotif === notification.id
-                      ? "#E6E6FA" // Lavender saat klik
-                      : hoveredNotif === notification.id
-                      ? "#E6E6FA" // Lavender saat hover
-                      : "", // Default background
-                  transition: "background-color 0.3s", 
-                }}
-              >
-                {notification.message}
+                className="dropdown-item text-muted"
+                style={{ padding: "15px", textAlign: "center", color: "#888" }}>
+                Tidak ada notifikasi baru
               </div>
-            ))
-          ) : (
-            <div
-              className="dropdown-item text-muted"
-              style={{ padding: "15px", textAlign: "center", color: "#888" }}
-            >
-              Tidak ada notifikasi baru
-            </div>
-          )}
+            )}
+          </div>
         </div>
       )}
     </div>
