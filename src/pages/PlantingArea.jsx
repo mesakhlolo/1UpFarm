@@ -28,8 +28,9 @@ const PlantingArea = () => {
 
   return (
     <main
-      className="flex-column align-items-start justify-content-start grayBg"
-      style={{ width: '78%', height: '100vh', overflowX: 'hidden', overflowY: 'auto' }}
+
+      className="planting-area flex-column align-items-start justify-content-start grayBg"
+      style={{ width: '100%', height: '100vh', overflowX: 'hidden', overflowY: 'auto' }}
     >
       <div
         className="d-flex p-5 align-items-center justify-content-center justify-content-between"
@@ -38,7 +39,7 @@ const PlantingArea = () => {
         <h1 className="fontPoppins fw-bold mb-0">Lacak Tanaman</h1>
         <Notif />
       </div>
-      <div className="position-relative mb-3 mx-4" style={{ width: '96%' }}>
+      <div className="position-relative mb-3 mx-4" style={{ width: '95%' }}>
         <SearchBar searchTerm={searchTerm} onSearchChange={setSearchTerm} />
       </div>
       <ActivePlants plants={activePlants} />

@@ -311,7 +311,6 @@ flex-direction: row;
 }
 
 .notif-body {
-  background-color: var(--mainColor);
   display: flex;
   flex-direction: row;
   margin-bottom: 5px;
