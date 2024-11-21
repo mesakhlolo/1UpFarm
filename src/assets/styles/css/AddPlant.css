@@ -1,0 +1,32 @@
+.selection-card {
+    cursor: pointer;
+    transition: transform all ease-in-out;
+    border: 2px solid transparent;
+}
+
+.hovercard:hover {
+    -webkit-box-shadow: 5px 5px 30px -10px rgba(102, 21, 153, 0.5);
+    -moz-box-shadow: 5px 5px 30px -10px rgba(102, 21, 153, 0.5);
+    box-shadow: 5px 5px 30px -10px rgba(102, 21, 153, 0.5);
+    border: 2px solid #661599;
+}
+
+.selection-card.active {
+    border-color: #661599;
+    transform: scale(1.05);
+    -webkit-box-shadow: 5px 5px 30px -10px rgba(102, 21, 153, 0.5);
+    -moz-box-shadow: 5px 5px 30px -10px rgba(102, 21, 153, 0.5);
+    box-shadow: 5px 5px 30px -10px rgba(102, 21, 153, 0.5);
+}
+
+.icon-placeholder {
+    font-size: 2rem;
+}
+
+.selection-result {
+    background-color: #d9baff;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

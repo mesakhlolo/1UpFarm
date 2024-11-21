@@ -23,7 +23,7 @@ const Profile = () => {
       style={{
         width: "100%",
         height: "100vh",
-        overflowY: "hide", 
+        overflowY: "hidden", 
       }}>
       <div className="content">
         <div className="row">

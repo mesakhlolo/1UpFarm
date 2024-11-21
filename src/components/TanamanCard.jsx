@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "../assets/styles/css/PlantingArea.css";
 
 const TanamanCard = ({ name, status, condition, image }) => (
   <div

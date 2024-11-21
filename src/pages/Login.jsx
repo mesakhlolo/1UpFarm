@@ -52,7 +52,7 @@ const LoginAccount = () => {
                             <Form.Control type="password" placeholder="Masukkan Kata Sandi" />
                         </Form.Group>
                         <div className="mt-1 text-end pb-4">
-                            <a href="/dashboard/change-password" style={{ textDecoration: 'none' }}> 
+                            <a href="/dashboard/change-password" style={{ color: '#661599', textDecoration: 'none' }}> 
                                 Lupa Kata Sandi
                             </a>
                         </div>
@@ -74,7 +74,7 @@ const LoginAccount = () => {
                             </Button>
                         </div>
                         <div className="mt-1 text-center pt-3">
-                            <p>Belum Punya Akun? <a href="/register" className="text-purple" style={{ fontWeight: 'bold' }}>Daftar</a></p>
+                            <p>Belum Punya Akun? <a href="/register" className="text-purple" style={{ color: '#661599', fontWeight: 'bold' }}>Daftar</a></p>
                         </div>
                     </Form>
                 </Col>

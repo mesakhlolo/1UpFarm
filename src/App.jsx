@@ -6,7 +6,6 @@ import LandingPage from "./pages/LandingPage";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import NotFound from "./pages/NotFound";
-import DetailPlant from "./pages/DetailPlant";
 
 function App() {
   const isAuthenticated = true; // Simulasi autentikasi, ganti dengan data yang valid

@@ -15,6 +15,7 @@ import Tomat from "../assets/images/icons/Tomat.png";
 import IconPlay from "../assets/images/icons/Play.svg";
 
 import Notif from "../components/Notif";
+import "../assets/styles/css/AddPlant.css";
 
 const AddPlant = () => {
   const navigate = useNavigate();
