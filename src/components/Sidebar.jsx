@@ -91,7 +91,7 @@ const Sidebar = () => {
               to="/dashboard/detail-profile"
               className="sidebar-menu-item">
               <img
-                src={IconNotes}
+                src={IconSetting}
                 alt="Detail Profil"
                 className="sidebar-menu-icon"
               />
@@ -101,7 +101,7 @@ const Sidebar = () => {
               to="/dashboard/change-password"
               className="sidebar-menu-item">
               <img
-                src={IconPlant}
+                src={IconSetting}
                 alt="Ganti Sandi"
                 className="sidebar-menu-icon"
               />

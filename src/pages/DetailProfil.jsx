@@ -12,30 +12,30 @@ const DetailProfil = () => {
   return (
     <div
       id="root"
-      className="grayBg d-flex align-items-center justify-content-center"
+      className="add-plant grayBg d-flex flex-column align-items-start justify-content-start"
       style={{
-        width: "78%",
+        width: "calc(100% - 250px)",
         height: "100vh",
-        fontFamily: "Poppins, sans-serif",
         overflowY: "auto",
         marginLeft: "350px",
-      }}>
-      <div className="grayBg align-items-center justify-content-center d-flex">
+      }}
+    >
+      <div className="grayBg align-items-center justify-content-center d-flex detail-profil-container">
         <Card
           style={{
             width: "600px",
             margin: "20px",
-            marginLeft: "-400px",
-            marginTop: "-100px",
             fontFamily: "Poppins, sans-serif",
-          }}>
+          }}
+        >
           <Card.Header
             style={{
               backgroundColor: "#611599",
               color: "#fff",
               textAlign: "left",
               fontFamily: "Poppins, sans-serif",
-            }}>
+            }}
+          >
             Detail
           </Card.Header>
           <Card.Body>
@@ -82,18 +82,17 @@ const DetailProfil = () => {
             </Form>
           </Card.Body>
         </Card>
-        <div style={{ position: "absolute", bottom: "140px", right: "470px" }}>
-          <Button
-            variant="primary"
-            type="button"
-            style={{
-              fontFamily: "Poppins, sans-serif",
-              backgroundColor: "#611599",
-              border: "none",
-            }}>
-            Konfirmasi
-          </Button>
-        </div>
+        <Button
+          variant="primary"
+          type="button"
+          className="confirm-button"
+          style={{
+            fontFamily: "Poppins, sans-serif",
+            backgroundColor: "#611599",
+            border: "none",
+          }}>
+          Konfirmasi
+        </Button>
       </div>
     </div>
   );

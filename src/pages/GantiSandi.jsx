@@ -7,22 +7,20 @@ const GantiSandi = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
 
   return (
-    <div
-      id="root"
-      className="grayBg d-flex align-items-center justify-content-center"
+    <div 
+      id="root" 
+      className="add-plant grayBg d-flex flex-column align-items-start justify-content-start"
       style={{
-        width: "78%",
+        width: "calc(100% - 250px)",
         height: "100vh",
-        fontFamily: "Poppins, sans-serif",
-        marginLeft: "350px",
+        overflowY: "auto",
+        marginLeft: "200px"
       }}>
-      <div className="grayBg align-items-center justify-content-center d-flex">
+      <div className="grayBg align-items-center justify-content-center d-flex detail-profile-container">
         <Card
           style={{
             width: "600px",
             margin: "20px",
-            marginLeft: "-400px",
-            marginTop: "-100px",
             fontFamily: "Poppins, sans-serif",
           }}>
           <Card.Header
@@ -69,7 +67,9 @@ const GantiSandi = () => {
         </Card>
         <div style={{ position: "absolute", bottom: "195px", right: "475px" }}>
           <Button
+            variant="primary"
             type="button"
+            className="button-confirm"
             style={{
               fontFamily: "Poppins, sans-serif",
               backgroundColor: "#611599",
