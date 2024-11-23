@@ -52,7 +52,7 @@ const LoginAccount = () => {
                             <Form.Control type="password" placeholder="Masukkan Kata Sandi" />
                         </Form.Group>
                         <div className="mt-1 text-end pb-4">
-                            <a href="/dashboard/change-password" style={{ color: '#661599', textDecoration: 'none' }}> 
+                            <a href="/lupakatasandi" style={{ color: '#661599', textDecoration: 'none' }}> 
                                 Lupa Kata Sandi
                             </a>
                         </div>
