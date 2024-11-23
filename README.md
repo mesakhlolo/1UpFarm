@@ -2,8 +2,6 @@
 
 Website App Gamifikasi Urban Farming
 
-Berikut versi yang lebih rapi untuk README Anda:
-
 ---
 
 ## Cara Clone dan Menjalankan Proyek Node.js
