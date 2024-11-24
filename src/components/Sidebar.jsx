@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { Dropdown } from "react-bootstrap";
 import "../assets/styles/css/Sidebar.css";
 
-// Import Icons
+// Import Ikon
 import LogoPurple from "../assets/images/icons/Logo-1UPFarm-Ungu.svg";
 import IconPerson from "../assets/images/icons/Person.svg";
 import IconNotes from "../assets/images/icons/Notes.svg";
@@ -13,7 +13,8 @@ import IconSetting from "../assets/images/icons/Setting.svg";
 import IconExit from "../assets/images/icons/Exit.svg";
 import IconBantuan from "../assets/images/icons/Bantuan.svg";
 import IconDetailProfil from "../assets/images/icons/detailProfil.svg";
-import IconGantiSandi from "../assets/images/icons/lupaSandi.svg"
+import IconGantiSandi from "../assets/images/icons/lupaSandi.svg";
+import IconArrowDown from "../assets/images/icons/ArrowDown.svg"; // Impor SVG panah kustom
 
 const menuItems = [
   {
@@ -41,11 +42,11 @@ const menuItems = [
 const Sidebar = () => {
   return (
     <div className="sidebar-container">
-      {/* Logo Section */}
+      {/* Bagian Logo */}
       <div className="sidebar-logo">
         <img
           src={LogoPurple}
-          alt="1UPFarm Logo"
+          alt="Logo 1UPFarm"
           className="sidebar-logo-image"
         />
         <h2
@@ -59,15 +60,14 @@ const Sidebar = () => {
         </h2>
       </div>
 
-      {/* Main Menu */}
+      {/* Menu Utama */}
       <div className="sidebar-menu-container">
         {menuItems.map((item) => (
           <NavLink
             key={item.to}
             to={item.to}
             className={({ isActive }) =>
-              `sidebar-menu-item ${isActive ? "sidebar-menu-item-active" : ""}`
-            }>
+              `sidebar-menu-item ${isActive ? "sidebar-menu-item-active" : ""}`}>
             <img
               src={item.icon}
               alt={item.label}
@@ -77,15 +77,23 @@ const Sidebar = () => {
           </NavLink>
         ))}
 
-        {/* Settings Dropdown */}
+        {/* Dropdown Pengaturan */}
         <Dropdown>
           <Dropdown.Toggle className="sidebar-dropdown-toggle" variant="none">
-            <img
-              src={IconSetting}
-              alt="Pengaturan"
-              className="sidebar-menu-icon"
-            />
-            <span>Pengaturan</span>
+            <div className="sidebar-dropdown-content">
+              <img
+                src={IconSetting}
+                alt="Pengaturan"
+                className="sidebar-menu-icon"
+              />
+              <span>Pengaturan</span>
+              {/* Ikon panah kustom yang diposisikan ke kanan */}
+              <img
+                src={IconArrowDown}
+                alt="Panah Bawah"
+                className="sidebar-dropdown-arrow"
+              />
+            </div>
           </Dropdown.Toggle>
 
           <Dropdown.Menu className="sidebar-dropdown-menu">
@@ -113,7 +121,7 @@ const Sidebar = () => {
         </Dropdown>
       </div>
 
-      {/* Footer Section */}
+      {/* Bagian Footer */}
       <div className="sidebar-footer-section">
         <NavLink to="/dashboard/help" className="sidebar-footer-item">
           <img

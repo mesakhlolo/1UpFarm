@@ -35,6 +35,26 @@
   color: #661599;
 }
 
+/* menghilangkan icon bawaan */
+
+/* Menyembunyikan ikon panah bawaan Bootstrap */
+.sidebar-dropdown-toggle::after {
+  display: none;
+}
+
+/* edit sidebar menu pengaturan */
+.sidebar-dropdown-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  width: 100%;
+}
+
+.sidebar-dropdown-arrow {
+  margin-left: auto;
+  width: 16px;
+  height: 16px;
+}
 
 /* Sidebar Specific Styles */
 .sidebar-container {
