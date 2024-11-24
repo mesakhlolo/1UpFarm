@@ -12,6 +12,8 @@ import IconTask from "../assets/images/icons/Task.svg";
 import IconSetting from "../assets/images/icons/Setting.svg";
 import IconExit from "../assets/images/icons/Exit.svg";
 import IconBantuan from "../assets/images/icons/Bantuan.svg";
+import IconDetailProfil from "../assets/images/icons/detailProfil.svg";
+import IconGantiSandi from "../assets/images/icons/lupaSandi.svg"
 
 const menuItems = [
   {
@@ -91,7 +93,7 @@ const Sidebar = () => {
               to="/dashboard/detail-profile"
               className="sidebar-menu-item">
               <img
-                src={IconSetting}
+                src={IconDetailProfil}
                 alt="Detail Profil"
                 className="sidebar-menu-icon"
               />
@@ -101,7 +103,7 @@ const Sidebar = () => {
               to="/dashboard/change-password"
               className="sidebar-menu-item">
               <img
-                src={IconSetting}
+                src={IconGantiSandi}
                 alt="Ganti Sandi"
                 className="sidebar-menu-icon"
               />
