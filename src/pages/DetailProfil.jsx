@@ -1,13 +1,20 @@
 import React, { useState } from "react";
-import { Form, Button, Card } from "react-bootstrap";
+import { Form, Button, Card, Alert } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPen } from "@fortawesome/free-solid-svg-icons";
 import "../assets/styles/css/main.css";
+import AleryIcon from "../assets/images/icons/aleryicon.svg"; 
 
 const DetailProfil = () => {
   const [name, setName] = useState("Zacky");
   const [username, setUsername] = useState("Zacky");
   const [email, setEmail] = useState("zacky123@gmail.com");
+  const [showAlert, setShowAlert] = useState(false); 
+
+  const handleConfirm = () => {
+    setShowAlert(true); 
+    setTimeout(() => setShowAlert(false), 3000); 
+  };
 
   return (
     <div
@@ -26,6 +33,7 @@ const DetailProfil = () => {
             width: "600px",
             margin: "20px",
             fontFamily: "Poppins, sans-serif",
+            marginTop: "70px"
           }}
         >
           <Card.Header
@@ -82,6 +90,8 @@ const DetailProfil = () => {
             </Form>
           </Card.Body>
         </Card>
+
+        {/* Tombol Konfirmasi */}
         <Button
           variant="primary"
           type="button"
@@ -90,10 +100,45 @@ const DetailProfil = () => {
             fontFamily: "Poppins, sans-serif",
             backgroundColor: "#611599",
             border: "none",
-          }}>
+          }}
+          onClick={handleConfirm} 
+        >
           Konfirmasi
         </Button>
       </div>
+
+      {/* Alert untuk notifikasi */}
+      {showAlert && (
+  <Alert
+    variant="success"
+    style={{
+      position: "fixed",
+      top: "20px", // Tetap di tengah atas
+      left: "50%",
+      transform: "translateX(-50%)",
+      width: "800px", 
+      height: "40px", 
+      backgroundColor: "#d4edda",
+      color: "#155724",
+      border: "1px solid #c3e6cb",
+      borderRadius: "5px",
+      boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "left",
+      zIndex: 1000,
+    }}
+        >
+          <img
+            src={AleryIcon} 
+            alt="Custom Check"
+            style={{ width: "20px", height: "20px", marginRight: "10px" }}
+          />
+          <span style={{ fontSize: "14px", fontWeight: "500" }}>
+              Nama anda berhasil diubah
+          </span>
+  </Alert>
+      )}
     </div>
   );
 };

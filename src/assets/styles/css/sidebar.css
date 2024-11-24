@@ -1,3 +1,41 @@
+.sidebar-dropdown-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 16px;
+  background-color: transparent;
+  border: none;
+  color: #000;
+  text-align: left;
+  border-radius: 0;
+}
+
+.sidebar-dropdown-menu {
+  width: 100%;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  background-color: #f8f9fa; 
+}
+
+.sidebar-dropdown-menu .sidebar-menu-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #661599;
+  text-decoration: none;
+}
+
+.sidebar-dropdown-menu .sidebar-menu-item:hover {
+  background-color: #d9baff; 
+  color: #661599;
+}
+
+
 /* Sidebar Specific Styles */
 .sidebar-container {
     display: flex;
