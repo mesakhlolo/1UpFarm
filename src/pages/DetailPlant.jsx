@@ -396,13 +396,22 @@ const DetailPlant = () => {
           <Carousel
             indicators
             interval={3000}
-            controls={false}
+            controls={true}
             className="custom-carousel"
           >
             {steps.map((step, index) => (
               <Carousel.Item key={index}>
                 <div className="card p-4 shadow-sm">
-                  <div className="step-indicator">Step {step.step}</div>
+                  <div
+                    className="step-indicator"
+                    style={{
+                      fontSize: "1.5rem",
+                      fontWeight: "bold",
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Step {step.step}
+                  </div>
                   <img
                     src={step.image}
                     className="carousel-img img-fluid rounded mb-3"
