@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Carousel, Card } from "react-bootstrap";
 import Notif from "../components/Notif";
 import BadgeModal from "../components/BadgeModal";
@@ -23,6 +23,50 @@ const DetailPlant = () => {
   const toggleBadgeModal = () => {
     setShowBadgeModal((prevState) => !prevState);
   };
+
+  // Data dummy langkah awal
+  const steps = [
+    {
+      step: 1,
+      image: step1Image,
+      title: "Persiapan Pot Tanam",
+      subtitle: "Pilih pot yang tepat & Media Tanam",
+      description:
+        "Gunakan pot dengan diameter minimal 20-30 cm dan kedalaman sekitar 15-20 cm. Pastikan pot memiliki lubang drainase di bagian bawah untuk menghindari air tergenang yang bisa menyebabkan akar membusuk.",
+    },
+    {
+      step: 2,
+      image: step2Image,
+      title: "Pemilihan Bibit",
+      subtitle: "Bibit berkualitas untuk hasil terbaik",
+      description:
+        "Pilih bibit berkualitas untuk memastikan pertumbuhan tanaman yang optimal. Bibit yang sehat akan meningkatkan peluang keberhasilan.",
+    },
+    {
+      step: 3,
+      image: step3Image,
+      title: "Penanaman",
+      subtitle: "Teknik menanam yang tepat",
+      description:
+        "Tanam bibit pada media tanam yang telah dipersiapkan, lalu siram secara merata untuk menjaga kelembaban tanah.",
+    },
+    {
+      step: 4,
+      image: step4Image,
+      title: "Siram dengan Air Bersih",
+      subtitle: "Lakukan penyiraman pada bibit",
+      description:
+        "Siram bibit dengan air bersih menggunakan semprotan tanaman. Lakukan penyiraman dua kali sehari pada pagi dan sore hari untuk menjaga kelembapan bibit.",
+    },
+    {
+      step: 5,
+      image: step5Image,
+      title: "Hindari Sinar Matahari Langsung",
+      subtitle: "Hindari papasan matahari pada bibit secara langsung",
+      description:
+        "Meskipun sinar matahari diperlukan untuk fotosintesis, pada tahap awal pertumbuhan, kelembapan lebih penting. Letakkan pot yang berisi bibit cabe di tempat yang terhindar dari sinar matahari langsung.",
+    },
+  ];
 
   // Data dummy rekomendasi nutrisi
   const rekomendasiNutrisi = [
@@ -56,7 +100,8 @@ const DetailPlant = () => {
         height: "100vh",
         overflowX: "hidden",
         overflowY: "auto",
-      }}>
+      }}
+    >
       {/* judul */}
       <div className="badge-container d-flex align-items-center justify-content-between p-4 mt-3">
         <h1 className="fontPoppins fw-bold mb-0">Detail Tanaman</h1>
@@ -83,7 +128,8 @@ const DetailPlant = () => {
                     width: "200px",
                     backgroundColor: "#661599",
                     border: "none",
-                  }}>
+                  }}
+                >
                   Tanam sekarang
                 </button>
               </a>
@@ -96,7 +142,8 @@ const DetailPlant = () => {
               <div className="d-flex mb-3" style={{ marginTop: "60px" }}>
                 <div
                   className="d-inline-block p-3 rounded position-relative"
-                  style={{ backgroundColor: "#fde6c5", textAlign: "center" }}>
+                  style={{ backgroundColor: "#fde6c5", textAlign: "center" }}
+                >
                   <div className="d-flex align-items-center justify-content-center gap-2">
                     {/* Waktu Tanam */}
                     <div className="text-center">
@@ -112,7 +159,8 @@ const DetailPlant = () => {
                         marginLeft: "10px",
                         marginRight: "10px",
                         fontWeight: "bold",
-                      }}>
+                      }}
+                    >
                       ▶
                     </div>
                     {/* Prediksi Panen */}
@@ -133,7 +181,8 @@ const DetailPlant = () => {
                       fontSize: "14px",
                       padding: "6px 12px",
                       borderRadius: "8px",
-                    }}>
+                    }}
+                  >
                     Status: Ongoing
                   </span>
                 </div>
@@ -147,12 +196,14 @@ const DetailPlant = () => {
                   marginBottom: "10px",
                   marginTop: "5px",
                   textAlign: "left",
-                }}>
+                }}
+              >
                 Kondisi, Periode &amp; Frekuensi Siraman
               </h5>
               <div
                 className="d-flex align-items-center"
-                style={{ marginTop: "100px" }}>
+                style={{ marginTop: "100px" }}
+              >
                 {/* Baik Condition Icon */}
                 <img
                   alt="Kondisi Baik"
@@ -172,7 +223,8 @@ const DetailPlant = () => {
                     {/* Progress Bar dengan Checkpoint */}
                     <div
                       className="position-relative"
-                      style={{ width: "250px", height: "30px" }}>
+                      style={{ width: "250px", height: "30px" }}
+                    >
                       {/* Bar Background */}
                       <div
                         className="progress"
@@ -182,7 +234,8 @@ const DetailPlant = () => {
                           backgroundColor: "#e9ecef",
                           borderRadius: "20px",
                           overflow: "hidden",
-                        }}>
+                        }}
+                      >
                         {/* Progress */}
                         <div
                           className="progress-bar"
@@ -193,7 +246,8 @@ const DetailPlant = () => {
                           }}
                           aria-valuenow="50"
                           aria-valuemin="0"
-                          aria-valuemax="100"></div>
+                          aria-valuemax="100"
+                        ></div>
                       </div>
 
                       {/* Checkpoints */}
@@ -211,7 +265,8 @@ const DetailPlant = () => {
                             backgroundColor: "#fff",
                             borderRadius: "50%",
                             border: index === 3 ? "none" : "2px solid #28a745",
-                          }}>
+                          }}
+                        >
                           {index === 3 ? (
                             // Gambar bendera di checkpoint terakhir
                             <img
@@ -229,7 +284,8 @@ const DetailPlant = () => {
                                 fontSize: "10px",
                                 color: "#28a745",
                                 fontWeight: "bold",
-                              }}>
+                              }}
+                            >
                               {index + 0}w
                             </span>
                           )}
@@ -249,7 +305,8 @@ const DetailPlant = () => {
                     {/* Bar Air */}
                     <div
                       className="card d-flex flex-row px-3 py-1"
-                      style={{ gap: "5px", backgroundColor: "#C1F1F1" }}>
+                      style={{ gap: "5px", backgroundColor: "#C1F1F1" }}
+                    >
                       {[...Array(5)].map((_, index) => (
                         <img
                           key={index}
@@ -261,7 +318,8 @@ const DetailPlant = () => {
                     </div>
                     <button
                       className="btn btn-info py-1 px-4"
-                      style={{ marginLeft: "15px", borderRadius: "15px" }}>
+                      style={{ marginLeft: "15px", borderRadius: "15px" }}
+                    >
                       Info
                     </button>
                   </div>
@@ -278,7 +336,8 @@ const DetailPlant = () => {
             borderRadius: "10px",
             maxWidth: "600px",
             margin: "0 auto",
-          }}>
+          }}
+        >
           {/* Bagian Kiri - Badge dan Deskripsi */}
           <div className="d-flex align-items-center">
             {/* Badge Icon */}
@@ -298,7 +357,8 @@ const DetailPlant = () => {
                   fontWeight: "bold",
                   fontSize: "16px",
                   margin: 0,
-                }}>
+                }}
+              >
                 Badge Mudah
               </p>
               <p
@@ -306,7 +366,8 @@ const DetailPlant = () => {
                   fontSize: "14px",
                   margin: 0,
                   color: "#555",
-                }}>
+                }}
+              >
                 Selesaikan tugas untuk mendapatkan lencana ini.
               </p>
             </div>
@@ -323,7 +384,8 @@ const DetailPlant = () => {
               fontWeight: "bold",
               border: "none",
             }}
-            onClick={toggleBadgeModal}>
+            onClick={toggleBadgeModal}
+          >
             Ambil
           </button>
         </div>
@@ -331,107 +393,39 @@ const DetailPlant = () => {
         {/* Langkah Awal */}
         <div className="mt-5">
           <h3 className="fontPoppins fw-bold mb-4">Langkah Awal</h3>
-          <Carousel indicators interval={3000} controls={false} className="custom-carousel">
-            {/* Slide 1 */}
-            <Carousel.Item>
-              <div className="card p-4 shadow-sm">
-                <div className="step-indicator">Step 1</div>
-                <img
-                  src={step1Image} // Pastikan path gambar benar
-                  className="carousel-img img-fluid rounded mb-3"
-                  alt="Step 1"
-                  style={{ height: '100%', objectFit: 'cover' }}
-                />
-                <h5 className="fontPoppins fw-bold" style={{ color: '#661599' }}>Persiapan Pot Tanam</h5>
-                <h6 className="fontPoppins text-muted">Pilih pot yang tepat & Media Tanam</h6>
-                <hr style={{ borderTop: '2px solid #661599', margin: '0.5rem 0' }} />
-                <p className="text-secondary">
-                  Gunakan pot dengan diameter minimal 20-30 cm dan kedalaman sekitar 15-20 cm.
-                  Pastikan pot memiliki lubang drainase di bagian bawah untuk menghindari air tergenang
-                  yang bisa menyebabkan akar membusuk.
-                </p>
-              </div>
-            </Carousel.Item>
-
-            {/* Slide 2 */}
-            <Carousel.Item>
-              <div className="card p-4 shadow-sm">
-                <div className="step-indicator">Step 2</div>
-                <img
-                  src={step2Image} // Pastikan path gambar benar
-                  className="carousel-img img-fluid rounded mb-3"
-                  alt="Step 2"
-                  style={{ height: '100%', objectFit: 'cover' }}
-                />
-                <h5 className="fontPoppins fw-bold" style={{ color: '#661599' }}>Pemilihan Bibit</h5>
-                <h6 className="fontPoppins text-muted">Bibit berkualitas untuk hasil terbaik</h6>
-                <hr style={{ borderTop: '2px solid #661599', margin: '0.5rem 0' }} />
-                <p className="text-secondary">
-                  Pilih bibit berkualitas untuk memastikan pertumbuhan tanaman yang optimal. Bibit yang
-                  sehat akan meningkatkan peluang keberhasilan.
-                </p>
-              </div>
-            </Carousel.Item>
-
-            {/* Slide 3 */}
-            <Carousel.Item>
-              <div className="card p-4 shadow-sm">
-                <div className="step-indicator">Step 3</div>
-                <img
-                  src={step3Image} // Pastikan path gambar benar
-                  className="carousel-img img-fluid rounded mb-3"
-                  alt="Step 3"
-                  style={{ height: '100%', objectFit: 'cover' }}
-                />
-                <h5 className="fontPoppins fw-bold" style={{ color: '#661599' }}>Penanaman</h5>
-                <h6 className="fontPoppins text-muted">Teknik menanam yang tepat</h6>
-                <hr style={{ borderTop: '2px solid #661599', margin: '0.5rem 0' }} />
-                <p className="text-secondary">
-                  Tanam bibit pada media tanam yang telah dipersiapkan, lalu siram secara merata untuk
-                  menjaga kelembaban tanah.
-                </p>
-              </div>
-            </Carousel.Item>
-
-            {/* Slide 4 */}
-            <Carousel.Item>
-              <div className="card p-4 shadow-sm">
-                <div className="step-indicator">Step 4</div>
-                <img
-                  src={step4Image} // Pastikan path gambar benar
-                  className="carousel-img img-fluid rounded mb-3"
-                  alt="Step 4"
-                  style={{ height: '100%', objectFit: 'cover' }}
-                />
-                <h5 className="fontPoppins fw-bold" style={{ color: '#661599' }}>Siram dengan Air Bersih</h5>
-                <h6 className="fontPoppins text-muted">Lakukan penyiraman pada bibit</h6>
-                <hr style={{ borderTop: '2px solid #661599', margin: '0.5rem 0' }} />
-                <p className="text-secondary">
-                  Siram bibit dengan air bersih menggunakan semprotan tanaman.
-                  Lakukan penyiraman dua kali sehari pada pagi dan sore hari untuk menjaga kelembapan bibit.
-                </p>
-              </div>
-            </Carousel.Item>
-
-            {/* Slide 5 */}
-            <Carousel.Item>
-              <div className="card p-4 shadow-sm">
-                <div className="step-indicator">Step 5</div>
-                <img
-                  src={step5Image} // Pastikan path gambar benar
-                  className="carousel-img img-fluid rounded mb-3"
-                  alt="Step 5"
-                  style={{ height: '100%', objectFit: 'cover' }}
-                />
-                <h5 className="fontPoppins fw-bold" style={{ color: '#661599' }}>Hindari Sinar Matahari Langsung</h5>
-                <h6 className="fontPoppins text-muted">Hindari papasan matahari pada bibit secara langsung</h6>
-                <hr style={{ borderTop: '2px solid #661599', margin: '0.5rem 0' }} />
-                <p className="text-secondary">
-                  Meskipun sinar matahari diperlukan untuk fotosintesis, pada tahap awal pertumbuhan, kelembapan lebih penting. 
-                  Letakkan pot yang berisi bibit cabe di tempat yang terhindar dari sinar matahari langsung.
-                </p>
-              </div>
-            </Carousel.Item>
+          <Carousel
+            indicators
+            interval={3000}
+            controls={false}
+            className="custom-carousel"
+          >
+            {steps.map((step, index) => (
+              <Carousel.Item key={index}>
+                <div className="card p-4 shadow-sm">
+                  <div className="step-indicator">Step {step.step}</div>
+                  <img
+                    src={step.image}
+                    className="carousel-img img-fluid rounded mb-3"
+                    alt={`Step ${step.step}`}
+                    style={{ height: "100%", objectFit: "cover" }}
+                  />
+                  <h5
+                    className="fontPoppins fw-bold"
+                    style={{ color: "#661599" }}
+                  >
+                    {step.title}
+                  </h5>
+                  <h6 className="fontPoppins text-muted">{step.subtitle}</h6>
+                  <hr
+                    style={{
+                      borderTop: "2px solid #661599",
+                      margin: "0.5rem 0",
+                    }}
+                  />
+                  <p className="text-secondary">{step.description}</p>
+                </div>
+              </Carousel.Item>
+            ))}
           </Carousel>
         </div>
 
@@ -443,26 +437,42 @@ const DetailPlant = () => {
             interval={null}
             prevLabel=""
             nextLabel=""
-            className="mt-3">
+            className="mt-3"
+          >
             {/* Membagi rekomendasiNutrisi menjadi grup 3 item per grup */}
-            {Array.from({ length: Math.ceil(rekomendasiNutrisi.length / 3) }, (_, index) => (
-              <Carousel.Item key={index}>
-                <div className="d-flex justify-content-start gap-4" style={{ paddingLeft: '7rem' }}>
-                  {rekomendasiNutrisi.slice(index * 3, (index + 1) * 3).map((nutrisi, idx) => (
-                    <Card key={idx} style={{ width: '18rem' }} className="shadow-sm">
-                      <Card.Img variant="top" src={nutrisi.image} alt={nutrisi.title} />
-                      <Card.Body>
-                        <Card.Title>{nutrisi.title}</Card.Title>
-                        <Card.Text>{nutrisi.description}</Card.Text>
-                      </Card.Body>
-                    </Card>
-                  ))}
-                </div>
-              </Carousel.Item>
-            ))}
+            {Array.from(
+              { length: Math.ceil(rekomendasiNutrisi.length / 3) },
+              (_, index) => (
+                <Carousel.Item key={index}>
+                  <div
+                    className="d-flex justify-content-start gap-4"
+                    style={{ paddingLeft: "7rem" }}
+                  >
+                    {rekomendasiNutrisi
+                      .slice(index * 3, (index + 1) * 3)
+                      .map((nutrisi, idx) => (
+                        <Card
+                          key={idx}
+                          style={{ width: "18rem" }}
+                          className="shadow-sm"
+                        >
+                          <Card.Img
+                            variant="top"
+                            src={nutrisi.image}
+                            alt={nutrisi.title}
+                          />
+                          <Card.Body>
+                            <Card.Title>{nutrisi.title}</Card.Title>
+                            <Card.Text>{nutrisi.description}</Card.Text>
+                          </Card.Body>
+                        </Card>
+                      ))}
+                  </div>
+                </Carousel.Item>
+              )
+            )}
           </Carousel>
         </div>
-
       </div>
       <BadgeModal show={showBadgeModal} onClose={toggleBadgeModal} />
     </main>
