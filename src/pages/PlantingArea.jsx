@@ -28,7 +28,6 @@ const PlantingArea = () => {
 
   return (
     <main
-
       className="planting-area flex-column align-items-start justify-content-start grayBg"
       style={{ width: '100%', height: '100vh', overflowX: 'hidden', overflowY: 'auto' }}
     >

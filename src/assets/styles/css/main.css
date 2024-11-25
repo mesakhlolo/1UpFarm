@@ -95,7 +95,7 @@ button {
 
 /* Styling untuk card agar lebih konsisten */
 .detail-plant {
-  margin-left: 250px !important; 
+  margin-left: 250px !important;
 }
 
 .detail-plant .card {
@@ -103,11 +103,12 @@ button {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   border: none;
-  max-width: 100%; 
+  max-width: 90%; 
+  margin: 0 auto;
 }
 
 .detail-plant .carousel-img {
-  height: auto;
+  height: 200px; 
   width: 100%;
   object-fit: cover;
   border-radius: 12px;
@@ -116,25 +117,43 @@ button {
 .detail-plant .carousel-control-prev,
 .detail-plant .carousel-control-next {
   width: 5%;
+  position: absolute; 
+  background: none; /* Menghilangkan background */
+  border: none; /* Menghilangkan border */
+  text-decoration: none;
 }
 
 .detail-plant .carousel-control-prev-icon,
 .detail-plant .carousel-control-next-icon {
-  background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 50%;
-  padding: 10px;
+  display: none; /* Sembunyikan ikon default */
+}
+
+.detail-plant .carousel-control-prev::after,
+.detail-plant .carousel-control-next::after {
+  font-size: 94px; /* Ukuran font untuk simbol panah */
+  color: #661599; /* Warna panah */
+}
+
+.detail-plant .carousel-control-prev::after {
+  content: '‹'; /* Simbol panah kiri */
+}
+
+.detail-plant .carousel-control-next::after {
+  content: '›'; /* Simbol panah kanan */
 }
 
 .detail-plant .carousel-control-prev {
-  left: -2.5rem;
+  left: 0; 
+  transform: translateX(200%); 
 }
 
 .detail-plant .carousel-control-next {
-  right: -2.5rem;
+  right: 0; 
+  transform: translateX(-200%); 
 }
 
 .detail-plant .carousel-indicators [data-bs-target] {
-  background-color: #6a0dad;
+  background-color: #6a0dad ;
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -144,6 +163,18 @@ button {
   background-color: #ff9800;
 }
 
+
+@media (max-width: 1366px) {
+  .detail-plant {
+    margin-left: 20px; 
+
+  }
+
+  .detail-plant .card {
+    max-width: 100%;
+  }
+}
+
 /* Responsivitas */
 @media (max-width: 768px) {
   .detail-plant {
@@ -151,7 +182,7 @@ button {
   }
 
   .detail-plant .card {
-    width: 100%; /* Kartu menggunakan lebar penuh pada layar kecil */
+    width: 80%; /* Kartu menggunakan lebar penuh pada layar kecil */
   }
 }
 

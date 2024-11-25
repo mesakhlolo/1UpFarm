@@ -67,21 +67,19 @@ const AddPlant = () => {
   };
 
   const handleStart = () => {
-    navigate("/dashboard/daily-tasks");
+    navigate("/dashboard/detail-plant");
   };
 
   const renderProgressBar = () => (
     <div
       className="d-flex flex-row gap-4 pt-4 pb-2 align-items-center justify-content-center"
-      style={{ width: "100%" }}
-    >
+      style={{ width: "100%" }}>
       {[0, 1, 2, 3].map((step) => (
         <div
           key={step}
           className={`${
             step <= activeStep ? "primaryBg" : "secondaryBg"
-          } px-4 py-1 rounded`}
-        ></div>
+          } px-4 py-1 rounded`}></div>
       ))}
     </div>
   );
@@ -236,8 +234,7 @@ const AddPlant = () => {
         height: "100vh",
         overflowY: "auto",
         marginLeft: "300px",
-      }}
-    >
+      }}>
       <Container>
         <div className="d-flex p-4 align-items-center justify-content-between">
           <h1 className="fontPoppins fw-bold mb-0">Tambah Tanaman</h1>
@@ -249,8 +246,7 @@ const AddPlant = () => {
           activeIndex={activeStep}
           controls={false}
           indicators={false}
-          interval={null}
-        >
+          interval={null}>
           {/* Tahap 1: Pilih Tempat Penanaman */}
           <Carousel.Item>
             <Container>
@@ -263,8 +259,7 @@ const AddPlant = () => {
               <div className="d-flex justify-content-center align-items-center py-5 px-5">
                 <Card
                   className="border-0 p-1 bg-white rounded"
-                  style={{ width: "350px" }}
-                >
+                  style={{ width: "350px" }}>
                   <Card.Img
                     variant="top"
                     src={PlacetoPlant}
@@ -287,8 +282,7 @@ const AddPlant = () => {
                           width: "400px",
                           cursor: "pointer",
                         }}
-                        onClick={() => handlePlaceSelect(place)}
-                      >
+                        onClick={() => handlePlaceSelect(place)}>
                         <div
                           className="d-flex align-items-center justify-content-center p-1 position-absolute bg-white"
                           style={{
@@ -296,15 +290,13 @@ const AddPlant = () => {
                             borderRadius: "100%",
                             aspectRatio: "1/1",
                             scale: "1.5",
-                          }}
-                        >
+                          }}>
                           <div
                             className="p-2"
                             style={{
                               borderRadius: "100%",
                               backgroundColor: "#EBE9FF",
-                            }}
-                          >
+                            }}>
                             <Image
                               src={place.icon}
                               className="w-100 bg-transparent"
@@ -343,8 +335,7 @@ const AddPlant = () => {
               <div className="d-flex justify-content-center align-items-center py-5 px-5">
                 <Card
                   className="border-0 p-1 bg-white rounded"
-                  style={{ width: "350px" }}
-                >
+                  style={{ width: "350px" }}>
                   <Card.Img
                     variant="top"
                     src={MethodPlanting}
@@ -367,8 +358,7 @@ const AddPlant = () => {
                           width: "400px",
                           cursor: "pointer",
                         }}
-                        onClick={() => handleMethodSelect(method)}
-                      >
+                        onClick={() => handleMethodSelect(method)}>
                         <div
                           className="d-flex align-items-center justify-content-center p-1 position-absolute bg-white"
                           style={{
@@ -376,15 +366,13 @@ const AddPlant = () => {
                             borderRadius: "100%",
                             aspectRatio: "1/1",
                             scale: "1.7",
-                          }}
-                        >
+                          }}>
                           <div
                             className="p-2"
                             style={{
                               borderRadius: "100%",
                               backgroundColor: "#EBE9FF",
-                            }}
-                          >
+                            }}>
                             <Image
                               src={method.icon}
                               className="w-100 bg-transparent"
@@ -432,14 +420,12 @@ const AddPlant = () => {
                         backgroundColor: "#EBE9FF",
                         aspectRatio: "4/5",
                       }}
-                      onClick={() => handlePlantSelect(plant)}
-                    >
+                      onClick={() => handlePlantSelect(plant)}>
                       <Card.Body className="d-flex flex-column align-items-center justify-content-between gap-2 text-center rounded-4 pt-4">
                         <div>
                           <Card.Title
                             className="fw-semibold mb-2"
-                            style={{ fontSize: "1.1rem" }}
-                          >
+                            style={{ fontSize: "1.1rem" }}>
                             {plant.title}
                           </Card.Title>
                           <Card.Subtitle className="mb-0 text-muted d-flex align-items-center justify-content-center gap-2">
@@ -488,8 +474,7 @@ const AddPlant = () => {
                   <div>
                     <button
                       onClick={refreshPage}
-                      className="fontPoppins primaryBg border-0 text-white px-5 py-1 rounded d-flex align-items-center justify-content-center"
-                    >
+                      className="fontPoppins primaryBg border-0 text-white px-5 py-1 rounded d-flex align-items-center justify-content-center">
                       Ubah
                     </button>
                   </div>
@@ -522,8 +507,7 @@ const AddPlant = () => {
               <div className="w-100 d-flex justify-content-center mt-5 px-5">
                 <button
                   onClick={handleStart}
-                  className="fontPoppins primaryBg border-0 text-white px-5 py-2 rounded"
-                >
+                  className="fontPoppins primaryBg border-0 text-white px-5 py-2 rounded">
                   Mulai
                 </button>
               </div>
