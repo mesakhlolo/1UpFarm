@@ -10,7 +10,12 @@ import JamImg from "../assets/images/icons/Jam.svg";
 import FlagImg from "../assets/images/icons/Flag.svg";
 import BaikImg from "../assets/images/icons/Baik.png";
 import bawangImg from "../assets/images/icons/Bawang.png";
-import step1Image from "../assets/images/detail-plant-images/step1.jpg";
+import sayurpupuk from "../assets/images/detail-plant-images/sayur.jpg";
+import step1Image from "../assets/images/detail-plant-images/step1.png";
+import step2Image from "../assets/images/detail-plant-images/step2.png";
+import step3Image from "../assets/images/detail-plant-images/step3.png";
+import step4Image from "../assets/images/detail-plant-images/step4.png";
+import step5Image from "../assets/images/detail-plant-images/step5.png";
 
 const DetailPlant = () => {
   const [showBadgeModal, setShowBadgeModal] = useState(false);
@@ -24,22 +29,22 @@ const DetailPlant = () => {
     {
       title: "Pupuk campuran",
       description: "Campuran kompos dari bahan organik",
-      image: step1Image,
+      image: sayurpupuk,
     },
     {
       title: "Pupuk organik",
       description: "Pupuk yang dibuat dari bahan alami",
-      image: step1Image,
+      image: sayurpupuk,
     },
     {
       title: "Pupuk cair",
       description: "Pupuk cair untuk pertumbuhan tanaman",
-      image: step1Image,
+      image: sayurpupuk,
     },
     {
       title: "Pupuk hijau",
       description: "Pupuk dari tanaman hijau",
-      image: step1Image,
+      image: sayurpupuk,
     },
   ];
 
@@ -326,57 +331,104 @@ const DetailPlant = () => {
         {/* Langkah Awal */}
         <div className="mt-5">
           <h3 className="fontPoppins fw-bold mb-4">Langkah Awal</h3>
-          <Carousel indicators={true} interval={3000} controls={true}>
+          <Carousel indicators interval={3000} controls={false} className="custom-carousel">
             {/* Slide 1 */}
             <Carousel.Item>
-              <div className="card p-3">
+              <div className="card p-4 shadow-sm">
+                <div className="step-indicator">Step 1</div>
                 <img
-                  src={step1Image}
-                  className="carousel-img img-fluid rounded"
+                  src={step1Image} // Pastikan path gambar benar
+                  className="carousel-img img-fluid rounded mb-3"
                   alt="Step 1"
+                  style={{ height: '100%', objectFit: 'cover' }}
                 />
-                <h5 className="fontPoppins fw-bold mt-3">
-                  Step 1: Persiapan Pot Tanam
-                </h5>
-                <p>
-                  Gunakan pot dengan diameter minimal 20-30 cm dan kedalaman
-                  sekitar 15-20 cm. Pastikan pot memiliki lubang drainase di
-                  bagian bawah untuk menghindari air tergenang.
+                <h5 className="fontPoppins fw-bold" style={{ color: '#661599' }}>Persiapan Pot Tanam</h5>
+                <h6 className="fontPoppins text-muted">Pilih pot yang tepat & Media Tanam</h6>
+                <hr style={{ borderTop: '2px solid #661599', margin: '0.5rem 0' }} />
+                <p className="text-secondary">
+                  Gunakan pot dengan diameter minimal 20-30 cm dan kedalaman sekitar 15-20 cm.
+                  Pastikan pot memiliki lubang drainase di bagian bawah untuk menghindari air tergenang
+                  yang bisa menyebabkan akar membusuk.
                 </p>
               </div>
             </Carousel.Item>
 
             {/* Slide 2 */}
             <Carousel.Item>
-              <div className="card p-3">
+              <div className="card p-4 shadow-sm">
+                <div className="step-indicator">Step 2</div>
                 <img
-                  src={step1Image}
-                  className="carousel-img img-fluid rounded"
+                  src={step2Image} // Pastikan path gambar benar
+                  className="carousel-img img-fluid rounded mb-3"
                   alt="Step 2"
+                  style={{ height: '100%', objectFit: 'cover' }}
                 />
-                <h5 className="fontPoppins fw-bold mt-3">
-                  Step 2: Pemilihan Bibit
-                </h5>
-                <p>
-                  Pilih bibit berkualitas untuk memastikan pertumbuhan tanaman
-                  yang optimal. Bibit yang sehat akan meningkatkan peluang
-                  keberhasilan.
+                <h5 className="fontPoppins fw-bold" style={{ color: '#661599' }}>Pemilihan Bibit</h5>
+                <h6 className="fontPoppins text-muted">Bibit berkualitas untuk hasil terbaik</h6>
+                <hr style={{ borderTop: '2px solid #661599', margin: '0.5rem 0' }} />
+                <p className="text-secondary">
+                  Pilih bibit berkualitas untuk memastikan pertumbuhan tanaman yang optimal. Bibit yang
+                  sehat akan meningkatkan peluang keberhasilan.
                 </p>
               </div>
             </Carousel.Item>
 
             {/* Slide 3 */}
             <Carousel.Item>
-              <div className="card p-3">
+              <div className="card p-4 shadow-sm">
+                <div className="step-indicator">Step 3</div>
                 <img
-                  src={step1Image}
-                  className="carousel-img img-fluid rounded"
+                  src={step3Image} // Pastikan path gambar benar
+                  className="carousel-img img-fluid rounded mb-3"
                   alt="Step 3"
+                  style={{ height: '100%', objectFit: 'cover' }}
                 />
-                <h5 className="fontPoppins fw-bold mt-3">Step 3: Penanaman</h5>
-                <p>
-                  Tanam bibit pada media tanam yang telah dipersiapkan, lalu
-                  siram secara merata untuk menjaga kelembaban tanah.
+                <h5 className="fontPoppins fw-bold" style={{ color: '#661599' }}>Penanaman</h5>
+                <h6 className="fontPoppins text-muted">Teknik menanam yang tepat</h6>
+                <hr style={{ borderTop: '2px solid #661599', margin: '0.5rem 0' }} />
+                <p className="text-secondary">
+                  Tanam bibit pada media tanam yang telah dipersiapkan, lalu siram secara merata untuk
+                  menjaga kelembaban tanah.
+                </p>
+              </div>
+            </Carousel.Item>
+
+            {/* Slide 4 */}
+            <Carousel.Item>
+              <div className="card p-4 shadow-sm">
+                <div className="step-indicator">Step 4</div>
+                <img
+                  src={step4Image} // Pastikan path gambar benar
+                  className="carousel-img img-fluid rounded mb-3"
+                  alt="Step 4"
+                  style={{ height: '100%', objectFit: 'cover' }}
+                />
+                <h5 className="fontPoppins fw-bold" style={{ color: '#661599' }}>Siram dengan Air Bersih</h5>
+                <h6 className="fontPoppins text-muted">Lakukan penyiraman pada bibit</h6>
+                <hr style={{ borderTop: '2px solid #661599', margin: '0.5rem 0' }} />
+                <p className="text-secondary">
+                  Siram bibit dengan air bersih menggunakan semprotan tanaman.
+                  Lakukan penyiraman dua kali sehari pada pagi dan sore hari untuk menjaga kelembapan bibit.
+                </p>
+              </div>
+            </Carousel.Item>
+
+            {/* Slide 5 */}
+            <Carousel.Item>
+              <div className="card p-4 shadow-sm">
+                <div className="step-indicator">Step 5</div>
+                <img
+                  src={step5Image} // Pastikan path gambar benar
+                  className="carousel-img img-fluid rounded mb-3"
+                  alt="Step 5"
+                  style={{ height: '100%', objectFit: 'cover' }}
+                />
+                <h5 className="fontPoppins fw-bold" style={{ color: '#661599' }}>Hindari Sinar Matahari Langsung</h5>
+                <h6 className="fontPoppins text-muted">Hindari papasan matahari pada bibit secara langsung</h6>
+                <hr style={{ borderTop: '2px solid #661599', margin: '0.5rem 0' }} />
+                <p className="text-secondary">
+                  Meskipun sinar matahari diperlukan untuk fotosintesis, pada tahap awal pertumbuhan, kelembapan lebih penting. 
+                  Letakkan pot yang berisi bibit cabe di tempat yang terhindar dari sinar matahari langsung.
                 </p>
               </div>
             </Carousel.Item>
@@ -392,33 +444,25 @@ const DetailPlant = () => {
             prevLabel=""
             nextLabel=""
             className="mt-3">
-            {/* Membagi item menjadi beberapa slide */}
-            {rekomendasiNutrisi.map((item, index) => (
+            {/* Membagi rekomendasiNutrisi menjadi grup 3 item per grup */}
+            {Array.from({ length: Math.ceil(rekomendasiNutrisi.length / 3) }, (_, index) => (
               <Carousel.Item key={index}>
-                <div className="d-flex justify-content-start gap-4">
-                  {rekomendasiNutrisi
-                    .slice(index, index + 3)
-                    .map((nutrisi, idx) => (
-                      <Card
-                        key={idx}
-                        style={{ width: "18rem" }}
-                        className="shadow-sm">
-                        <Card.Img
-                          variant="top"
-                          src={nutrisi.image}
-                          alt={nutrisi.title}
-                        />
-                        <Card.Body>
-                          <Card.Title>{nutrisi.title}</Card.Title>
-                          <Card.Text>{nutrisi.description}</Card.Text>
-                        </Card.Body>
-                      </Card>
-                    ))}
+                <div className="d-flex justify-content-start gap-4" style={{ paddingLeft: '7rem' }}>
+                  {rekomendasiNutrisi.slice(index * 3, (index + 1) * 3).map((nutrisi, idx) => (
+                    <Card key={idx} style={{ width: '18rem' }} className="shadow-sm">
+                      <Card.Img variant="top" src={nutrisi.image} alt={nutrisi.title} />
+                      <Card.Body>
+                        <Card.Title>{nutrisi.title}</Card.Title>
+                        <Card.Text>{nutrisi.description}</Card.Text>
+                      </Card.Body>
+                    </Card>
+                  ))}
                 </div>
               </Carousel.Item>
             ))}
           </Carousel>
         </div>
+
       </div>
       <BadgeModal show={showBadgeModal} onClose={toggleBadgeModal} />
     </main>
