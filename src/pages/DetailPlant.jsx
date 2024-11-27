@@ -94,24 +94,25 @@ const DetailPlant = () => {
 
   return (
     <main
-      className="detail-plant flex-column align-items-start justify-content-start grayBg"
+      className="detail-plant flex-column container-fluid px-0 align-items-start justify-content-start grayBg "
       style={{
-        width: "100%",
-        height: "100vh",
+        minHeight: "100vh",
         overflowX: "hidden",
-        overflowY: "auto",
-      }}
-    >
+        maxWidth: "100%",
+        margin: "0 auto",
+      }}>
       {/* judul */}
-      <div className="badge-container d-flex align-items-center justify-content-between p-4 mt-3">
+      <div
+        className="d-flex p-5 align-items-center justify-content-center justify-content-between"
+        style={{ width: "100%", height: "15vh" }}>
         <h1 className="fontPoppins fw-bold mb-0">Detail Tanaman</h1>
         <Notif />
       </div>
 
-      <div className="mb-5 mx-5">
+      <div className="container-fluid px-0 px-md-3">
         {/* section detail tanaman */}
         <div className="card">
-          <div className="card-body d-flex align-items-start">
+          <div className="card-body d-flex flex-column flex-md-row align-items-center align-items-md-start">
             {/* Bagian Kiri - Gambar dan Tombol */}
             <div className="me-4 text-center" style={{ width: "200px" }}>
               <img
@@ -128,22 +129,20 @@ const DetailPlant = () => {
                     width: "200px",
                     backgroundColor: "#661599",
                     border: "none",
-                  }}
-                >
-                  Tanam sekarang
+                  }}>
+                  Kerjakan Tugas
                 </button>
               </a>
             </div>
 
             {/* Bagian Tengah - Informasi Tanaman */}
             <div>
-              <h2>Bayam</h2>
+              <h2>Bawang Merah</h2>
               <p>Penanaman di Tanah - Pot</p>
               <div className="d-flex mb-3" style={{ marginTop: "60px" }}>
                 <div
                   className="d-inline-block p-3 rounded position-relative"
-                  style={{ backgroundColor: "#fde6c5", textAlign: "center" }}
-                >
+                  style={{ backgroundColor: "#fde6c5", textAlign: "center" }}>
                   <div className="d-flex align-items-center justify-content-center gap-2">
                     {/* Waktu Tanam */}
                     <div className="text-center">
@@ -159,8 +158,7 @@ const DetailPlant = () => {
                         marginLeft: "10px",
                         marginRight: "10px",
                         fontWeight: "bold",
-                      }}
-                    >
+                      }}>
                       ▶
                     </div>
                     {/* Prediksi Panen */}
@@ -181,8 +179,7 @@ const DetailPlant = () => {
                       fontSize: "14px",
                       padding: "6px 12px",
                       borderRadius: "8px",
-                    }}
-                  >
+                    }}>
                     Status: Ongoing
                   </span>
                 </div>
@@ -196,14 +193,12 @@ const DetailPlant = () => {
                   marginBottom: "10px",
                   marginTop: "5px",
                   textAlign: "left",
-                }}
-              >
+                }}>
                 Kondisi, Periode &amp; Frekuensi Siraman
               </h5>
               <div
                 className="d-flex align-items-center"
-                style={{ marginTop: "100px" }}
-              >
+                style={{ marginTop: "100px" }}>
                 {/* Baik Condition Icon */}
                 <img
                   alt="Kondisi Baik"
@@ -223,8 +218,7 @@ const DetailPlant = () => {
                     {/* Progress Bar dengan Checkpoint */}
                     <div
                       className="position-relative"
-                      style={{ width: "250px", height: "30px" }}
-                    >
+                      style={{ width: "250px", height: "30px" }}>
                       {/* Bar Background */}
                       <div
                         className="progress"
@@ -234,8 +228,7 @@ const DetailPlant = () => {
                           backgroundColor: "#e9ecef",
                           borderRadius: "20px",
                           overflow: "hidden",
-                        }}
-                      >
+                        }}>
                         {/* Progress */}
                         <div
                           className="progress-bar"
@@ -246,8 +239,7 @@ const DetailPlant = () => {
                           }}
                           aria-valuenow="50"
                           aria-valuemin="0"
-                          aria-valuemax="100"
-                        ></div>
+                          aria-valuemax="100"></div>
                       </div>
 
                       {/* Checkpoints */}
@@ -265,8 +257,7 @@ const DetailPlant = () => {
                             backgroundColor: "#fff",
                             borderRadius: "50%",
                             border: index === 3 ? "none" : "2px solid #28a745",
-                          }}
-                        >
+                          }}>
                           {index === 3 ? (
                             // Gambar bendera di checkpoint terakhir
                             <img
@@ -284,8 +275,7 @@ const DetailPlant = () => {
                                 fontSize: "10px",
                                 color: "#28a745",
                                 fontWeight: "bold",
-                              }}
-                            >
+                              }}>
                               {index + 0}w
                             </span>
                           )}
@@ -305,8 +295,7 @@ const DetailPlant = () => {
                     {/* Bar Air */}
                     <div
                       className="card d-flex flex-row px-3 py-1"
-                      style={{ gap: "5px", backgroundColor: "#C1F1F1" }}
-                    >
+                      style={{ gap: "5px", backgroundColor: "#C1F1F1" }}>
                       {[...Array(5)].map((_, index) => (
                         <img
                           key={index}
@@ -318,8 +307,7 @@ const DetailPlant = () => {
                     </div>
                     <button
                       className="btn btn-info py-1 px-4"
-                      style={{ marginLeft: "15px", borderRadius: "15px" }}
-                    >
+                      style={{ marginLeft: "15px", borderRadius: "15px" }}>
                       Info
                     </button>
                   </div>
@@ -336,8 +324,7 @@ const DetailPlant = () => {
             borderRadius: "10px",
             maxWidth: "600px",
             margin: "0 auto",
-          }}
-        >
+          }}>
           {/* Bagian Kiri - Badge dan Deskripsi */}
           <div className="d-flex align-items-center">
             {/* Badge Icon */}
@@ -357,8 +344,7 @@ const DetailPlant = () => {
                   fontWeight: "bold",
                   fontSize: "16px",
                   margin: 0,
-                }}
-              >
+                }}>
                 Badge Mudah
               </p>
               <p
@@ -366,8 +352,7 @@ const DetailPlant = () => {
                   fontSize: "14px",
                   margin: 0,
                   color: "#555",
-                }}
-              >
+                }}>
                 Selesaikan tugas untuk mendapatkan lencana ini.
               </p>
             </div>
@@ -384,32 +369,31 @@ const DetailPlant = () => {
               fontWeight: "bold",
               border: "none",
             }}
-            onClick={toggleBadgeModal}
-          >
+            onClick={toggleBadgeModal}>
             Ambil
           </button>
         </div>
 
         {/* Langkah Awal */}
         <div className="mt-5">
-          <h3 className="fontPoppins fw-bold mb-4">Langkah Awal</h3>
+          <h3 className="fontPoppins fw-bold mb-4" style={{ marginLeft:'100px' }}>Langkah Awal</h3>
           <Carousel
             indicators
             interval={3000}
             controls={true}
-            className="custom-carousel"
-          >
+            className="custom-carousel">
             {steps.map((step, index) => (
               <Carousel.Item key={index}>
-                <div className="card p-4 shadow-sm">
+                <div
+                  className="card p-3 shadow-sm"
+                  style={{ width: "80%", height: "500px" }}>
                   <div
                     className="step-indicator"
                     style={{
                       fontSize: "1.5rem",
                       fontWeight: "bold",
                       marginBottom: "0.5rem",
-                    }}
-                  >
+                    }}>
                     Step {step.step}
                   </div>
                   <img
@@ -420,8 +404,7 @@ const DetailPlant = () => {
                   />
                   <h5
                     className="fontPoppins fw-bold"
-                    style={{ color: "#661599" }}
-                  >
+                    style={{ color: "#661599" }}>
                     {step.title}
                   </h5>
                   <h6 className="fontPoppins text-muted">{step.subtitle}</h6>
@@ -440,31 +423,29 @@ const DetailPlant = () => {
 
         {/* Rekomendasi Nutrisi */}
         <div className="mt-5">
-          <h3 className="fontPoppins fw-bold">Rekomendasi Nutrisi</h3>
+          <h3 className="fontPoppins fw-bold" style={{ marginLeft:'100px' }}>Rekomendasi Nutrisi</h3>
           <Carousel
             indicators={false}
             interval={null}
             prevLabel=""
             nextLabel=""
-            className="mt-3"
-          >
+            className="mt-3">
             {/* Membagi rekomendasiNutrisi menjadi grup 3 item per grup */}
             {Array.from(
               { length: Math.ceil(rekomendasiNutrisi.length / 3) },
               (_, index) => (
                 <Carousel.Item key={index}>
                   <div
-                    className="d-flex justify-content-start gap-4"
-                    style={{ paddingLeft: "7rem" }}
-                  >
+                    className="d-flex justify-content-center gap-4" 
+                    style={{ paddingLeft: "7rem", paddingRight: "7rem" }}>
+                    {" "}
                     {rekomendasiNutrisi
                       .slice(index * 3, (index + 1) * 3)
                       .map((nutrisi, idx) => (
                         <Card
                           key={idx}
-                          style={{ width: "18rem" }}
-                          className="shadow-sm"
-                        >
+                          style={{ width: "15rem" }}
+                          className="shadow-sm">
                           <Card.Img
                             variant="top"
                             src={nutrisi.image}
