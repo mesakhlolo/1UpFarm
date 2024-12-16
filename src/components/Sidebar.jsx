@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { Dropdown } from "react-bootstrap";
 import "../assets/styles/css/Sidebar.css";
 
@@ -15,6 +15,7 @@ import IconBantuan from "../assets/images/icons/Bantuan.svg";
 import IconDetailProfil from "../assets/images/icons/detailProfil.svg";
 import IconGantiSandi from "../assets/images/icons/lupaSandi.svg";
 import IconArrowDown from "../assets/images/icons/ArrowDown.svg"; // Impor SVG panah kustom
+import { Button } from "bootstrap/dist/js/bootstrap.bundle.min";
 
 const menuItems = [
   {
@@ -39,7 +40,15 @@ const menuItems = [
   },
 ];
 
+
+
 const Sidebar = () => {
+  const navigate = useNavigate ();
+
+const logout = () => {
+  sessionStorage.clear ()
+  navigate ('/')
+}
   return (
     <div className="sidebar-container">
       {/* Bagian Logo */}
@@ -131,10 +140,10 @@ const Sidebar = () => {
           />
           <span>Pusat Bantuan</span>
         </NavLink>
-        <NavLink to="/logout" className="sidebar-footer-item">
+        <button onClick={logout} className="sidebar-footer-item btn">
           <img src={IconExit} alt="Keluar" className="sidebar-menu-icon" />
           <span>Keluar</span>
-        </NavLink>
+        </button>
       </div>
     </div>
   );

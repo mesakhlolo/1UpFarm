@@ -96,7 +96,7 @@ const LoginAccount = () => {
                                     color: 'white',
                                     border: 'none'
                                 }}
-                                // onClick={() => navigate('/dashboard/profile')}
+                                
                                 >
                                 Masuk
                             </Button>
