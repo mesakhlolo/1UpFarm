@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Tomat from "../assets/images/illustrations/tomat.png";
 import Cabai from "../assets/images/illustrations/cabai.png";
 import Bayam from "../assets/images/illustrations/Bayam.png";
@@ -18,6 +18,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 const Profile = () => {
+  const [name, setName] = useState("")
+
+  useEffect (() => {
+    setName (JSON.parse(sessionStorage.getItem("user")).name)
+  }, [])
   return (
     <div className="profile grayBg d-flex flex-column align-items-start justify-content-start"
       style={{
@@ -33,7 +38,7 @@ const Profile = () => {
               <div className="d-flex justify-content-between align-items-center">
                 <div>
                   <h4 className="fw-bold" style={{ color: "#611599" }}>
-                    Zacky!
+                    {name}!
                   </h4>
                   <h5>Capai Progress kamu Hari Ini!</h5>
                   <br />

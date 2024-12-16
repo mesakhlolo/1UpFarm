@@ -1,16 +1,44 @@
-import React from 'react';
+import React, { useState } from "react";
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHands } from '@fortawesome/free-solid-svg-icons';
 import LogooImg from '../assets/images/icons/Logo-1UPFarm-ungu.svg';
 import { useNavigate } from 'react-router-dom'; 
+import { getProfile, userLogin } from "../utils/api.auth";
 
 const LoginAccount = () => {
     const navigate = useNavigate(); 
+    const [email, setEmail ] = useState ("")
+    const [password, setPassword ] = useState ("")
+    
     const handleLoginSubmit = (e) => {
         e.preventDefault(); 
-        navigate('/dashboard/profile');
+        // navigate('/dashboard/profile');
+            const data = {
+              email : email,
+              password : password,
+            }
+            console.log (data)
+        
+            userLogin(data)
+            .then((res)=>{
+                sessionStorage.setItem ("token", res.data.token)
+                getProfile()
+                .then ((respon)=> {
+                    sessionStorage.setItem("user",JSON.stringify(respon.data.data))
+                    console.log(respon.data.data)
+                    navigate ('/dashboard/profile')
+                })
+                .catch((err)=>{
+                    console.log(err)
+                })
+            })
+            .catch((err)=>{
+              console.log (err)
+            })
     };
+
+    
 
     return (
         <Container fluid className="vh-100 d-flex align-items-center bg-light">
@@ -44,12 +72,12 @@ const LoginAccount = () => {
                     <Form className="w-100" onSubmit={handleLoginSubmit}> 
                         <Form.Group controlId="formEmail" className="mb-3">
                             <Form.Label className="text-purple">E-mail</Form.Label>
-                            <Form.Control type="email" placeholder="Masukkan E-mail" />
+                            <Form.Control type="email" placeholder="Masukkan E-mail" value={email} onChange={(e)=>setEmail(e.target.value)}/>
                         </Form.Group>
 
                         <Form.Group controlId="formPassword" className="mb-3">
                             <Form.Label className="text-purple">Kata Sandi</Form.Label>
-                            <Form.Control type="password" placeholder="Masukkan Kata Sandi" />
+                            <Form.Control type="password" placeholder="Masukkan Kata Sandi" value={password} onChange={(e)=>setPassword(e.target.value)}/>
                         </Form.Group>
                         <div className="mt-1 text-end pb-4">
                             <a href="/lupakatasandi" style={{ color: '#661599', textDecoration: 'none' }}> 
@@ -68,7 +96,7 @@ const LoginAccount = () => {
                                     color: 'white',
                                     border: 'none'
                                 }}
-                                onClick={() => navigate('/dashboard/profile')}
+                                // onClick={() => navigate('/dashboard/profile')}
                                 >
                                 Masuk
                             </Button>

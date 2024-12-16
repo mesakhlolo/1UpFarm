@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Form, Button, Image } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import { json, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPencil } from "@fortawesome/free-solid-svg-icons";
 import LogooImg from "../assets/images/icons/Logo-1UPFarm-ungu.svg";
 import Male from "../assets/images/Male.png";
 import Female from "../assets/images/Female.png";
 import "../assets/styles/css/register.css";
+import { userRegister } from "../utils/api.auth";
 
 function CreateAccount() {
   const [selectedGender, setSelectedGender] = useState(null);
@@ -16,11 +17,31 @@ function CreateAccount() {
     setSelectedGender(gender);
   };
 
+  const [name, setName ] = useState ("")
+  const [email, setEmail ] = useState ("")
+  const [password, setPassword ] = useState ("")
+
   const handleLoginSubmit = (e) => {
     e.preventDefault();
-    navigate("/login");
+    // navigate("/login");
+    const data = {
+      name : name,
+      email : email,
+      password : password,
+      gender : selectedGender == "female"?"F" : "M"
+    }
+    console.log (data)
+
+    userRegister(data)
+    .then((res)=>{
+      navigate ('/login')
+    })
+    .catch((err)=>{
+      console.log (err)
+    })
   };
 
+  
   return (
     <Container
       fluid
@@ -64,17 +85,17 @@ function CreateAccount() {
           <Form className="w-100" onSubmit={handleLoginSubmit}>
             <Form.Group controlId="formUsername" className="mb-3">
               <Form.Label className="text-purple">Nama Lengkap</Form.Label>
-              <Form.Control type="text" placeholder="Masukkan Nama Lengkap" />
+              <Form.Control type="text" placeholder="Masukkan Nama Lengkap" value={name} onChange={(e)=>setName(e.target.value)} />
             </Form.Group>
 
             <Form.Group controlId="formEmail" className="mb-3">
               <Form.Label className="text-purple">E-mail</Form.Label>
-              <Form.Control type="email" placeholder="Masukkan E-mail" />
+              <Form.Control type="email" placeholder="Masukkan E-mail" value={email} onChange={(e)=>setEmail(e.target.value)}/>
             </Form.Group>
 
             <Form.Group controlId="formPassword" className="mb-3">
               <Form.Label className="text-purple">Kata Sandi</Form.Label>
-              <Form.Control type="password" placeholder="Masukkan Kata Sandi" />
+              <Form.Control type="password" placeholder="Masukkan Kata Sandi" value={password} onChange={(e)=>setPassword(e.target.value)}/>
             </Form.Group>
 
             <Form.Group controlId="formGender" className="mb-3 d-flex gap-3">
