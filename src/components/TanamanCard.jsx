@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const TanamanCard = ({ name, status, condition, image }) => (
+const TanamanCard = ({ name, status, condition, image, plantId }) => (
   <div
     className="card"
     style={{
@@ -31,7 +31,7 @@ const TanamanCard = ({ name, status, condition, image }) => (
         <div>
           <h5 className="card-title font-weight-bold mb-2">{name}</h5>
           <p className="card-text mb-0">
-            <small>Status: {status}</small>
+            <small>Status: {status} hari</small>
           </p>
           <p className="card-text">
             <small>Kondisi: {condition}</small>
@@ -40,20 +40,21 @@ const TanamanCard = ({ name, status, condition, image }) => (
         <div
           className="d-flex justify-content-center"
           style={{ width: "100%", height: "34px" }}>
-            <a href="/dashboard/detail-plant" className="text-white" style={{
-              width: "90%",
-            }}>
-          <button
-            className="fontPoppins primaryBg text-white border-0 rounded"
-            style={{
-              width: "90%",
-              height: "30px",
-              fontSize: "12px",
-              padding: "5px",
-              marginLeft: '15px',
-              marginTop: '10px',
-            }}>Lihat
-          </button></a>
+          <a href={`/dashboard/detail-plant/${plantId}`} className="text-white" style={{
+            width: "90%",
+          }}>
+            <button
+              className="fontPoppins primaryBg text-white border-0 rounded"
+              style={{
+                width: "90%",
+                height: "30px",
+                fontSize: "12px",
+                padding: "5px",
+                marginLeft: '15px',
+                marginTop: '10px',
+              }}>Lihat
+            </button>
+          </a>
         </div>
       </div>
     </div>
@@ -62,9 +63,10 @@ const TanamanCard = ({ name, status, condition, image }) => (
 
 TanamanCard.propTypes = {
   name: PropTypes.string.isRequired,
-  status: PropTypes.string.isRequired,
+  status: PropTypes.number.isRequired,
   condition: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
+  plantId: PropTypes.number.isRequired,
 };
 
 export default TanamanCard;

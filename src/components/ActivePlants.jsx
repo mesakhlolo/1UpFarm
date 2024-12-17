@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import TanamanCard from '../components/TanamanCard';
 
+const BASE_URL = 'http://localhost:3000';
 const ActivePlants = ({ plants }) => {
   return (
     <div>
@@ -9,7 +10,13 @@ const ActivePlants = ({ plants }) => {
       <div className="scrollable row mb-4 mx-4" style={{ maxHeight: '400px' }}>
         {plants.map((plant, index) => (
           <div key={index} className="col-md-4 mb-4 d-flex justify-content-center">
-            <TanamanCard name={plant.name} status={plant.status} condition={plant.condition} image={plant.image} />
+            <TanamanCard 
+              name={plant.plantName} 
+              status={plant.harvestDay} // Menggunakan harvestDay sebagai status
+              condition={plant.difficulty} // Menggunakan difficulty sebagai kondisi
+              image={`${BASE_URL}${plant.urlPicture}`} // Menggambil url static API
+              plantId={plant.plantId} 
+            />
           </div>
         ))}
       </div>
