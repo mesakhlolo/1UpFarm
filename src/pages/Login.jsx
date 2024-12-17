@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHands } from '@fortawesome/free-solid-svg-icons';
-import LogooImg from '../assets/images/icons/Logo-1UPFarm-ungu.svg';
+import LogooImg from '../src/assets/images/icons/Logo-1UPFarm-ungu.svg';
 import { useNavigate } from 'react-router-dom'; 
 
 const LoginAccount = () => {
