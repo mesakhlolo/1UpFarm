@@ -3,7 +3,7 @@ import { Container, Row, Col, Form, Button, Image } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPencil } from "@fortawesome/free-solid-svg-icons";
-import LogooImg from "../assets/images/icons/Logo-1UPFarm-ungu.svg";
+import LogooImg from "../src/assets/images/icons/Logo-1UPFarm-ungu.svg";
 import Male from "../assets/images/Male.png";
 import Female from "../assets/images/Female.png";
 import "../assets/styles/css/register.css";
