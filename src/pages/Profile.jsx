@@ -38,7 +38,7 @@ const Profile = () => {
               <div className="d-flex justify-content-between align-items-center">
                 <div>
                   <h4 className="fw-bold" style={{ color: "#611599" }}>
-                    {name}!
+                   Hi, {name}!
                   </h4>
                   <h5>Capai Progress kamu Hari Ini!</h5>
                   <br />

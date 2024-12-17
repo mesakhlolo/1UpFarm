@@ -4,16 +4,50 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPen } from "@fortawesome/free-solid-svg-icons";
 import "../assets/styles/css/main.css";
 import AleryIcon from "../assets/images/icons/aleryicon.svg"; 
+import { updateUser } from "../utils/api.update";
 
 const DetailProfil = () => {
-  const [name, setName] = useState("Zacky");
-  const [username, setUsername] = useState("Zacky");
-  const [email, setEmail] = useState("zacky123@gmail.com");
-  const [showAlert, setShowAlert] = useState(false); 
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [showAlert, setShowAlert] = useState(false);
 
-  const handleConfirm = () => {
-    setShowAlert(true); 
-    setTimeout(() => setShowAlert(false), 3000); 
+  useEffect(() => {
+    const user = JSON.parse(sessionStorage.getItem("user"));
+    console.log("User from sessionStorage:", user); // Tambahkan log untuk memeriksa data
+    if (user) {
+      setName(user.name);
+      setEmail(user.email);
+    }
+  }, []);
+
+
+  const handleConfirm = (e) => {
+    e.preventDefault();
+    
+    const user = JSON.parse(sessionStorage.getItem("user")); // Ambil user dari sessionStorage
+    if (!user || !user.id) {
+      console.error("User data is missing in sessionStorage!");
+      return;
+    }
+  
+    const updatedData = {
+      name: name,
+      email: email,
+    };
+    console.log("Data to update:", updatedData);
+  
+    updateUser(user.id, updatedData)
+      .then((response) => {
+        console.log("Update response:", response.data);
+        if (response.data.status === "success") {
+          setShowAlert(true); // Tampilkan alert sukses
+          setTimeout(() => setShowAlert(false), 3000);
+          sessionStorage.setItem("user", JSON.stringify(response.data.data)); // Update sessionStorage
+        }
+      })
+      .catch((err) => {
+        console.error("Error updating user:", err);
+      });
   };
 
   return (
