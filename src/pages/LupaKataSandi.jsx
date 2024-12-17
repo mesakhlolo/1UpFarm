@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUnlockAlt } from '@fortawesome/free-solid-svg-icons'; // Ikon untuk 'Lupa Kata Sandi'
-import LogooImg from '../assets/images/icons/Logo-1UPFarm-ungu.svg'; // Ganti dengan path logo Anda
+import LogooImg from '../src/assets/images/icons/Logo-1UPFarm-ungu.svg'; // Ganti dengan path logo Anda
 import "../assets/styles/css/main.css";
 
 const LupaKataSandi = () => {
