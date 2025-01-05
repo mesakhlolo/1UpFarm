@@ -4,7 +4,7 @@ Website App Gamifikasi Urban Farming
 
 ---
 
-## Cara Clone dan Menjalankan Proyek Node.js
+## Cara Clone dan Menjalankan Proyek 1UpFarm
 
 ### 1. Pastikan Anda Telah Menginstal Git dan Node.js
 
